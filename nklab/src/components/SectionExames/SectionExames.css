@@ -1,0 +1,97 @@
+.section-exams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Adicionei padding para melhor espaçamento */
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 100px; /* Espaçamento entre o título e a grade */
+    font-size: 1.5em; /* Aumentei o tamanho da fonte do título */
+    font-weight: bold;
+  }
+  
+  .exams-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Responsivo, ajusta o número de colunas baseado na largura da tela */
+    grid-gap: 40px; /* Espaçamento entre os cards */
+  }
+  
+  .exam-card {
+    display: flex; /* Alinha os elementos na horizontal */
+    align-items: center; /* Centraliza os itens verticalmente */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    border-left: 30px solid #31AFE3;
+    width: 400px;
+    height: 70px;
+    gap: 15px; /* Espaçamento entre o ícone e o texto */
+}
+  
+  .exam-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+  }
+  
+  
+  .exam-icon {
+    margin-bottom: 0; /* Remove o espaçamento inferior */
+    display: flex;
+    align-items: center;
+}
+  
+  .exam-icon img {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 50px;
+  }
+
+  
+  
+  @media (max-width: 768px) {
+    /* Alinhamento da grid para uma coluna */
+    .exams-grid {
+        grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
+    }
+
+    /* Ajuste do título */
+    .section-title {
+        font-size: 1.2em;
+        margin-bottom: 30px; /* Menos espaçamento */
+    }
+
+    /* Ajustes nos cards */
+    .exam-card {
+        width: 90%; /* Maior largura */
+        max-width: 100%; /* Não ultrapassa a largura */
+        height: auto; /* Ajusta a altura */
+    }
+
+    /* Ajustes nas imagens */
+    .exam-icon img {
+        width: 35px; /* Imagem um pouco menor */
+        height: 35px;
+    }
+
+    /* Se quiser mais ajustes, adicione aqui */
+}
+
+/* Responsividade para telas muito pequenas (max-width: 480px) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.1em; /* Reduzir mais o título */
+        margin-bottom: 20px; /* Espaçamento reduzido */
+    }
+
+    .exam-card {
+        width: 100%; /* O card ocupa toda a largura */
+    }
+
+    .exam-icon img {
+        width: 30px; /* Ajusta ainda mais a imagem */
+        height: 30px;
+    }
+}
+  

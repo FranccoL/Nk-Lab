@@ -1,0 +1,82 @@
+.sectionContato{
+    margin-top: 200px;
+}
+.sectionContato h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.cardMap{
+    background-color: #121D32;
+    margin-left: 150px;
+    border-radius: 30px;
+    height: 590px;
+    width: 530px;
+    color: white;
+    text-align: center;
+  
+}
+.cardMap h1{
+    font-size: 30px;
+}
+
+.cardMap iframe {
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+
+.cardContato{
+    height: 550px;
+    width: 530px;
+    color: white;
+    text-align: center;
+    margin-right: 150px;
+    background-color: #27AAE1;
+    border-radius: 30px;
+    text-align: start;
+}
+
+.cardContato h1 {
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+
+.cardContato h2 {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-bottom: -10px;
+}
+
+
+.cardContato p {
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Alinha os itens na mesma linha */
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    margin-bottom: 45px;
+}
+
+.iconC {
+    width: 70px;
+    height: 70px;
+}
+
+.contact-item div {
+    display: flex;
+    flex-direction: column; /* Faz o h2 e p ficarem um abaixo do outro */
+}
+
+.cardContato {
+    text-align: start; /* Garante que o texto fique alinhado à esquerda */
+    padding: 20px;
+}
+

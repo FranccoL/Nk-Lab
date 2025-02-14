@@ -1,0 +1,115 @@
+
+
+.section-home {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f4fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3eaf4;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blue-box {
+  width: 450px;
+  height: 400px;
+  background-color: #29a3ef;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.microscope-icon {
+  width: 80%;
+  height: auto;
+}
+
+.content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 400px;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  
+}
+
+.description {
+  font-size: 1rem;
+  color: #4BC6F8;
+  margin-top: 10px;
+
+}
+
+.contact-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width: 200px;
+}
+
+.contact-button:hover {
+  background-color: #29a3ef;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-fly {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-fly:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 40px;
+  height: 40px;
+}
