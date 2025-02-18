@@ -6,7 +6,7 @@ function SectionHome() {
       <div className="container">
         <div className="blue-box">
           <img
-            src="/microNK.svg"
+            src="/home.svg"
             alt="Microscópio com pata"
             className="microscope-icon"
           />

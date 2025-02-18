@@ -8,11 +8,12 @@ body {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-
+  overflow-x: hidden;
 }
+
  /*GRID*/
 .container {
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
 }
 

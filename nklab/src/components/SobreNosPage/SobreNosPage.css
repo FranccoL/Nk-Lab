@@ -1,0 +1,128 @@
+.container-Sobre {
+    position: relative; /* Necessário para o posicionamento absoluto da imagem e do texto */
+  }
+  
+  .sobrenos {
+    width: 100%;
+  }
+  
+  .imgSobre {
+    height: 1300px; 
+  }
+  
+  .cardText {
+    position: absolute;
+    top: 380px; /* Distância do topo */
+    left: 130px; /* Distância da esquerda */
+    color: rgb(0, 0, 0); /* Para o texto ficar visível sobre a imagem */
+    font-size: 18px; /* Ajuste o tamanho conforme necessário */
+    width: 750px; /* Pode ajustar conforme necessário */
+    background-color: white;
+    border-radius: 30px;
+    height: 700px;
+    padding: 20px;
+  }
+  
+  .cardText h2, .cardText h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 25px;
+    line-height: 2.4;
+    font-weight: normal;
+  }
+  
+  .cardText h3 {
+    font-size: 18px;
+    font-style: italic; /* Se quiser dar um destaque diferente para o h3 */
+  }
+  
+  .carrossel-container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1130px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .avaliacao-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 350px; /* Altura fixa para os cards */
+  }
+  
+  .foto-avaliador {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .avaliacao-card p {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  .avaliacao-card h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #007bff;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  .carrossel-wrapper {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .carrossel-wrapper h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: -30px; /* Ajuste para posicionar os bullets mais para baixo */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #007bff; /* Cor dos bullets */
+    width: 12px; /* Tamanho do bullet */
+    height: 12px;
+    border-radius: 50%; /* Bullet redondo */
+    margin: 0 5px; /* Espaçamento entre os bullets */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #333; /* Cor do bullet ativo */
+  }
+  

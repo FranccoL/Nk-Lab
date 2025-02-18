@@ -1,0 +1,41 @@
+/* Container principal do post completo */
+.blog-completo-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .blog-completo-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-completo-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .blog-completo-container p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .blog-completo-container .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .blog-completo-container .back-link:hover {
+    text-decoration: underline;
+  }
+  

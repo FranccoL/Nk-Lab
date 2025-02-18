@@ -50,48 +50,5 @@
 
   
   
-  @media (max-width: 768px) {
-    /* Alinhamento da grid para uma coluna */
-    .exams-grid {
-        grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
-    }
-
-    /* Ajuste do título */
-    .section-title {
-        font-size: 1.2em;
-        margin-bottom: 30px; /* Menos espaçamento */
-    }
-
-    /* Ajustes nos cards */
-    .exam-card {
-        width: 90%; /* Maior largura */
-        max-width: 100%; /* Não ultrapassa a largura */
-        height: auto; /* Ajusta a altura */
-    }
-
-    /* Ajustes nas imagens */
-    .exam-icon img {
-        width: 35px; /* Imagem um pouco menor */
-        height: 35px;
-    }
-
-    /* Se quiser mais ajustes, adicione aqui */
-}
-
-/* Responsividade para telas muito pequenas (max-width: 480px) */
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.1em; /* Reduzir mais o título */
-        margin-bottom: 20px; /* Espaçamento reduzido */
-    }
-
-    .exam-card {
-        width: 100%; /* O card ocupa toda a largura */
-    }
-
-    .exam-icon img {
-        width: 30px; /* Ajusta ainda mais a imagem */
-        height: 30px;
-    }
-}
+  
   

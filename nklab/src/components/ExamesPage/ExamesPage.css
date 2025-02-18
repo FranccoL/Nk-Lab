@@ -1,0 +1,115 @@
+.exames-logo {
+    position: absolute;
+    margin-top: 100px;
+    width: 500px;
+    height: auto;
+}
+
+.exames-text {
+    margin-top: 150px;
+    width: 800px;
+    margin-left: 550px;
+}
+
+.exames-text h1 {
+    color: #27AAE1;
+    font-size: 25px;
+}
+
+.exames-text p {
+    width: 600px;
+    line-height: 180%;
+    font-size: 22px;
+}
+
+/* Section Exames Cards */
+
+.exames-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.exames-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.exames-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: space-between; /* Espaço entre os elementos */
+}
+
+.exames-card:hover {
+    transform: translateY(-5px);
+}
+
+.exames-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.exames-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.exames-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.exames-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.exames-button {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.exames-button:hover {
+    background: #0056b3;
+}
+
+.exames-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 colunas fixas */
+    gap: 20px;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .exames-grid {
+        grid-template-columns: repeat(2, 1fr); /* Reduz para 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .exames-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna para telas pequenas */
+    }
+}
