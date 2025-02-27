@@ -1,4 +1,8 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
+
+
+
 
 function Footer() {
   return (
@@ -23,7 +27,8 @@ function Footer() {
         </div>
 
         {/* Botão abaixo das imagens */}
-        <a href="/admin" className="buttonFooter">Área Admin</a>
+        <Link to="/blog-interno" className="buttonFooter">Área Admin</Link>
+
       </div>
     </div>
   );

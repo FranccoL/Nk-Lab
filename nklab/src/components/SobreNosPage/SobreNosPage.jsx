@@ -9,7 +9,7 @@ const avaliacoes = [
     { nome: "Ileana / Mamãe do Pedrinho", texto: "Sem palavras para descrever! Viramos clientes por causa do plano de saúde, mas agora somos fiéis para sempre! Desde o atendimento na recepção, até antes da coleta, durante e depois. Falo que Pedrinho ama fazer exame, mas com vocês ama mais ainda (...) entra feliz e sai ainda mais feliz depois de ser mimado com os petiscos!", foto: "/avaliacao-pedro.svg" },
     { nome: "Larissa/ Mamãe do Léo", texto: "Queria agradecer vocês por todo o cuidado com o nosso Léo! Começando desde a coleta até a liberação dos laudos, por toda atenção e carinho! Recomendo muuito! Nosso guerreirinho está ótimo! Um grande abraço!!", foto: "/avaliacao-leo.svg" },
     { nome: "Dr. Leonardo / Nosso Vet Parceiro", texto: "Rápido retorno dos exames, sem contar o atendimento impecável!", foto: "/avaliacao-drleo.svg" },
-    { nome: "Dra. Letícia / Nossa Vet Parceira", texto: "Profissional ímpar, desde o contato, atendimento e compromisso com o Veterinário. Exames de qualidade, dra Camila sempre disponível para auxiliar nas nossas dúvidas. Super Recomendo!", foto: "/avaliacao-leto.svg" },
+    { nome: "Dra. Letícia / Nossa Vet Parceira", texto: "Profissional ímpar, desde o contato, atendimento e compromisso com o Veterinário. Exames de qualidade, dra Camila sempre disponível para auxiliar nas nossas dúvidas. Super Recomendo!", foto: "/draLeticia.svg" },
 ];
 
 function SobreNosPage() {

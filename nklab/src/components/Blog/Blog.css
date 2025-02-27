@@ -4,9 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 150px;
   }
   
   .blog-post {
@@ -14,8 +12,10 @@
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
-    width: 30%;
+    width: 500px;
+    height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
   }
   
   .blog-post:hover {
@@ -25,19 +25,29 @@
   
   .blog-post img {
     width: 100%;
+    height: 300px; /* Ajuste a altura de acordo com sua necessidade */
+    object-fit: cover; /* A imagem irá cobrir todo o espaço do contêiner sem distorcer */
     border-radius: 8px;
-    object-fit: cover;
   }
   
+  
   .blog-post h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #333;
     margin: 10px 0;
+    white-space: nowrap; /* Impede a quebra de linha no título */
+    overflow: hidden; /* Esconde o conteúdo extra */
+    text-overflow: ellipsis; /* Adiciona '...' no final do texto que ultrapassar */
   }
   
   .blog-post p {
     color: #777;
     font-size: 1rem;
+    overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+    text-overflow: ellipsis; /* Adiciona '...' no final do texto que ultrapassar */
+    display: -webkit-box; /* Para truncar o texto */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
   
   .blog-post a {
@@ -46,7 +56,9 @@
     text-decoration: none;
   }
   
+
   .blog-post a:hover {
     text-decoration: underline;
   }
+
   
