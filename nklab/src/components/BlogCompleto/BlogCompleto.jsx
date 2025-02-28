@@ -1,33 +1,80 @@
-// BlogCompleto.jsx
-import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom"; // Adicione useNavigate
+import './BlogCompleto.css';
 
-const BlogCompleto = ({ posts }) => {
+const BlogCompleto = () => {
   const { id } = useParams();
-  const post = posts.find((p) => p.id === parseInt(id));
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-  if (!post) return <div>Post não encontrado!</div>;
+  useEffect(() => {
+    const fetchPost = async () => {
+      setLoading(true);
+      setError(null);
+
+      // 🔹 Primeiro, verifica no localStorage
+      const savedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+      const localPost = savedPosts.find((p) => p._id === id);
+
+      if (localPost) {
+        console.log("Post carregado do localStorage:", localPost);
+        setPost(localPost);
+        setLoading(false);
+        return;
+      }
+
+      // 🔹 Se não encontrou no localStorage, busca no backend
+      try {
+        const response = await fetch(`http://localhost:5000/api/posts/${id}`);
+
+        if (!response.ok) {
+          throw new Error(`Erro ao buscar post: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Post carregado do backend:", data);
+        setPost(data);
+      } catch (err) {
+        console.error("Erro ao carregar o post:", err);
+        setError("Erro ao carregar o post. Tente novamente.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPost();
+  }, [id]);
+
+  const formatContent = (content) => {
+    return content.split('\n').map((item, index) => (
+      <span key={index}>
+        {item}
+        <br />
+      </span>
+    ));
+  };
+
+  if (loading) return <p>Carregando post...</p>;
+  if (error) return <p>{error}</p>;
+  if (!post) return <p>Post não encontrado.</p>;
 
   return (
-    <div>
+    <div className="blog-completo-container">
       <h1>{post.title}</h1>
       <img src={post.image} alt={post.title} />
-      <p>{post.content}</p>
+      <p>{post.description}</p>
+      <div>{formatContent(post.content)}</div>
+
+      <button 
+        className="back-link" 
+        onClick={() => navigate('/blog')} // Ao clicar, navega para o blog
+      >
+        Voltar para o Blog
+      </button>
     </div>
   );
-};
-
-// Adicionando a validação de tipo para as props
-BlogCompleto.propTypes = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-    })
-  ).isRequired, // posts deve ser um array com os objetos esperados e é obrigatório
 };
 
 export default BlogCompleto;

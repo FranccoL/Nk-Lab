@@ -1,10 +1,11 @@
 .sectionContato{
     margin-top: 200px;
+
 }
 .sectionContato h1{
-    font-size: 40px;
+    font-size: 37px;
     text-align: center;
-    margin-bottom: 70px;
+    
 }
 
 
@@ -12,14 +13,14 @@
     background-color: #121D32;
     margin-left: 150px;
     border-radius: 30px;
-    height: 590px;
+    height: 570px;
     width: 530px;
     color: white;
     text-align: center;
   
 }
 .cardMap h1{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .cardMap iframe {
@@ -29,7 +30,7 @@
 
 
 .cardContato{
-    height: 550px;
+    height: 530px;
     width: 530px;
     color: white;
     text-align: center;

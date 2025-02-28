@@ -27,6 +27,8 @@
 .exames-section {
     text-align: center;
     padding: 40px 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .exames-title {
@@ -50,6 +52,7 @@
     flex-direction: column;
     align-items: center; /* Centraliza o conteúdo */
     justify-content: space-between; /* Espaço entre os elementos */
+   
 }
 
 .exames-card:hover {

@@ -8,20 +8,24 @@ import BlogPostCompleto from './pages/BlogPostCompleto';
 import BlogAdmin from './pages/BlogAdmin';
 
 function App() {
-  const loadPosts = () => {
+  // Carrega os posts do localStorage ao iniciar
+  const [posts, setPosts] = useState(() => {
     const savedPosts = localStorage.getItem('posts');
-    console.log('Posts carregados do localStorage:', savedPosts); // Verifique os posts carregados
     return savedPosts ? JSON.parse(savedPosts) : [];
-  };
+  });
 
-  const [posts, setPosts] = useState(loadPosts);
-
+  // Salva os posts no localStorage sempre que `posts` for atualizado
   useEffect(() => {
     localStorage.setItem('posts', JSON.stringify(posts));
   }, [posts]);
 
+  // Adiciona um novo post à lista e salva no localStorage
   const addPost = (newPost) => {
-    setPosts((prevPosts) => [...prevPosts, newPost]);
+    setPosts((prevPosts) => {
+      const updatedPosts = [...prevPosts, newPost];
+      localStorage.setItem('posts', JSON.stringify(updatedPosts));
+      return updatedPosts;
+    });
   };
 
   return (
