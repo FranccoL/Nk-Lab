@@ -10,20 +10,49 @@ const avaliacoes = [
     { nome: "Larissa/ Mamãe do Léo", texto: "Queria agradecer vocês por todo o cuidado com o nosso Léo! Começando desde a coleta até a liberação dos laudos, por toda atenção e carinho! Recomendo muuito! Nosso guerreirinho está ótimo! Um grande abraço!!", foto: "/avaliacao-leo.svg" },
     { nome: "Dr. Leonardo / Nosso Vet Parceiro", texto: "Rápido retorno dos exames, sem contar o atendimento impecável!", foto: "/avaliacao-drleo.svg" },
     { nome: "Dra. Letícia / Nossa Vet Parceira", texto: "Profissional ímpar, desde o contato, atendimento e compromisso com o Veterinário. Exames de qualidade, dra Camila sempre disponível para auxiliar nas nossas dúvidas. Super Recomendo!", foto: "/draLeticia.svg" },
-];
+    { nome: "Camila Melo", texto: "A veterinária Camila foi perfeita pra tirar sangue da minha gatinha de 15 anos. Geralmente é muito difícil conseguir examiná-la, são necessárias algumas picadas/tentativas. Com a Camila, ela percebeu como ela se sentiria mais a vontade, deixou ela bem tranquila e confortável, foi uma picada rápida, exame rápido e minha gatinha ainda pediu carinho pra ela depois. Foi perfeito!", foto: "/reviewWoman.svg" },
+  ];
 
 function SobreNosPage() {
   return (
-    <div className="container-Sobre">
+    <div className="containerSobre2"> 
+      <div className="sobreHeader">
+        <h2>Sobre Nós</h2>
+      </div>
       <div className="sobrenos">
         <div className="imgSobre d-flex al-center jc-flex-center">
           <img src="/imgSobre.svg" alt="Imagem Sobre Nós" className="imgSobre" />
+
           <div className="cardText d-flex flex-column">
-            <h2>No NK Laboratório, acreditamos que um diagnóstico preciso faz toda a diferença na vida dos pets e no trabalho dos Médicos Veterinários. Nosso compromisso é oferecer resultados confiáveis, desde a coleta até a entrega do laudo, com tecnologia de ponta e dedicação.</h2>
-            <h3>Nosso nome carrega um propósito: inspirado no Linfócito NK, célula essencial do sistema imune, traduzimos essa força em análises clínicas de excelência para a rotina Veterinária.</h3>
+            <img src="/LOGOnk.svg" alt="Logo NK Laboratório" className="logoSobre2" />
+
+            <div className="conteudoSobre d-flex">
+              <img src="/diagnostic.svg" alt="Imagem sobre nós" className="imagemLateral" />
+              <div className="textoSobre">
+                <h2>
+                  No NK Laboratório, acreditamos que um diagnóstico preciso faz toda a diferença na vida dos pets e no trabalho dos Médicos Veterinários. Nosso compromisso é oferecer resultados confiáveis, desde a coleta até a entrega do laudo, com tecnologia de ponta e dedicação.
+                  <br /><br />
+                  Nosso nome carrega um propósito: inspirado no Linfócito NK, célula essencial do sistema imune, traduzimos essa força em análises clínicas de excelência para a rotina Veterinária.
+                </h2>
+              </div>
+            </div>
+
+            <div className="conteudoSobre d-flex">
+              <div className="texto2Sobre">
+                <h2>
+                  💙 Missão: Garantir diagnósticos precisos e confiáveis, proporcionando suporte aos veterinários e segurança aos tutores.
+                  <br />🚀 Visão: Tornar-se referência em análises clínicas veterinárias, elevando o padrão da Medicina Veterinária.
+                  <br />🔬 Valores: Competência, eficiência, agilidade e inovação, sempre com amor e compromisso com nossos amigos peludos.
+                </h2>
+              </div>
+              <img src="/diagnostic2.svg" alt="Imagem sobre nós" className="imagemLateral2" />
+            </div>
+
+            <h3>NK Laboratório – Excelência que transforma a saúde do seu pet!</h3>
           </div>
         </div>
       </div>
+
       <div className="carrossel-wrapper">
         <h2>O que nossos clientes dizem</h2>
         <div className="carrossel-container">

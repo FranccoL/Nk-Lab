@@ -9,6 +9,9 @@ export default defineConfig({
     outDir: 'dist',
   },
   server: {
-    historyApiFallback: true, // Garante suporte ao fallback
+    proxy: {
+      '/api': 'http://localhost:5001',  // Definindo que todas as requisições para /api vão para o backend
+    },
   },
 })
+ 

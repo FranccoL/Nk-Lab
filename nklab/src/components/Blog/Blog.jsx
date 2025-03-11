@@ -68,6 +68,9 @@ const Blog = () => {
 
   return (
     <div className="blog-container">
+      <div className="exames-header">
+        <h2>Sobre Nós</h2>
+      </div>
       {postsToRender.length === 0 ? (
         <p>Nenhum post encontrado.</p>
       ) : (

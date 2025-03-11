@@ -26,9 +26,6 @@ function Footer() {
           </a>
         </div>
 
-        {/* Botão abaixo das imagens */}
-        <Link to="/blog-interno" className="buttonFooter">Área Admin</Link>
-
       </div>
     </div>
   );

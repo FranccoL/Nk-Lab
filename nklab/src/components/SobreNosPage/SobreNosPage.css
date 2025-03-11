@@ -1,128 +1,211 @@
-.container-Sobre {
-    position: relative; /* Necessário para o posicionamento absoluto da imagem e do texto */
-  }
+.containerSobre2 {
+  position: relative;
+}
+
+.sobreHeader {
+  width: 250px;
+  background: linear-gradient(to right, rgba(49, 175, 227, 0.8), rgba(115, 115, 115, 0.1));
+  padding: 15px;
+  text-align: start;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 10px;
+  height: 50px;
+}
+.sobreHeader h2{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
   
-  .sobrenos {
-    width: 100%;
-  }
+}
+
+.sobrenos {
+  width: 100%;
+}
+
+.logoSobre2 {
+  width: 400px;
+  position: relative;
+  bottom: 10px;
+  left: 400px;
+}
+
+.imgSobre {
+  width: 98%;
+  margin-left: 25px;
+  margin-top: -50px;
+}
+
+.cardText {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  width: 1250px;
+  background-color: white;
+  border-radius: 30px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudoSobre {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 250px;
+}
+
+.imagemLateral {
+  width: 400px;
+  position: relative;
+  bottom: 170px;
+  left: 100px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid black;
+}
+
+.imagemLateral:hover {
+  transform: scale(1.05);
+  box-shadow: -5px 5px 0px #4BC6F8;
+}
+.textoSobre {
+  width: 60%;
+}
+
+.cardText h2 {
+  font-size: 20px;
+  line-height: 2.0;
+  font-weight: normal;
+  margin-top: -350px;
+  margin-left: 200px;
+}
+
+.cardText h3 {
+  font-size: 18px;
+  font-style: italic;
+  position: relative;
+  top: -350px;
+  left: 100px;
+}
+
+.texto2Sobre{
+  position: relative;
+  right: 100px;
+  bottom: 100px;
   
-  .imgSobre {
-    height: 1300px; 
-  }
-  
-  .cardText {
-    position: absolute;
-    top: 380px; /* Distância do topo */
-    left: 130px; /* Distância da esquerda */
-    color: rgb(0, 0, 0); /* Para o texto ficar visível sobre a imagem */
-    font-size: 18px; /* Ajuste o tamanho conforme necessário */
-    width: 750px; /* Pode ajustar conforme necessário */
-    background-color: white;
-    border-radius: 30px;
-    height: 700px;
-    padding: 20px;
-  }
-  
-  .cardText h2, .cardText h3 {
-    margin: 0;
-    padding-bottom: 10px;
-    font-size: 25px;
-    line-height: 2.4;
-    font-weight: normal;
-  }
-  
-  .cardText h3 {
-    font-size: 18px;
-    font-style: italic; /* Se quiser dar um destaque diferente para o h3 */
-  }
-  
-  .carrossel-container {
-    text-align: center;
-    padding: 40px 20px;
-    max-width: 1130px;
-    margin: 0 auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .avaliacao-card {
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    
-    height: 350px; /* Altura fixa para os cards */
-  }
-  
-  .foto-avaliador {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .avaliacao-card p {
-    font-size: 16px;
-    font-style: italic;
-    color: #555;
-  }
-  
-  .avaliacao-card h4 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #007bff;
-  }
-  
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-  }
-  
-  .carrossel-wrapper {
-    text-align: center;
-    padding: 40px 20px;
-  }
-  
-  .carrossel-wrapper h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .swiper-pagination {
-    position: absolute;
-    bottom: -30px; /* Ajuste para posicionar os bullets mais para baixo */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: #007bff; /* Cor dos bullets */
-    width: 12px; /* Tamanho do bullet */
-    height: 12px;
-    border-radius: 50%; /* Bullet redondo */
-    margin: 0 5px; /* Espaçamento entre os bullets */
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #333; /* Cor do bullet ativo */
-  }
-  
+}
+
+.imagemLateral2{
+  width: 400px;
+  position: relative;
+  bottom: 300px;
+  right: 100px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagemLateral2:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 0px #4BC6F8;
+}
+
+.carrossel-container {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1130px;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+.avaliacao-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+  border: solid 1px #4BC6F8;
+}
+
+.foto-avaliador {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.avaliacao-card p {
+  font-size: 16px;
+  font-style: italic;
+  color: #555;
+}
+
+.avaliacao-card h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.carrossel-wrapper {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.carrossel-wrapper h2 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 508px;
+ 
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  background-color: #007bff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #333;
+}

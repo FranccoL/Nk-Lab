@@ -1,12 +1,35 @@
+/* Título "Sobre Nós" */
+.exames-header {
+    width: 250px;
+    background: linear-gradient(to right, rgba(49, 175, 227, 0.8), rgba(115, 115, 115, 0.1));
+    padding: 15px;
+    text-align: start;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px ;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.exames-header h2 {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    
+    
+}
+
+
+
+
+
+
 .exames-logo {
     position: absolute;
-    margin-top: 100px;
     width: 500px;
     height: auto;
 }
 
 .exames-text {
-    margin-top: 150px;
+    margin-top: 80px;
     width: 800px;
     margin-left: 550px;
 }
@@ -76,6 +99,10 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
+.exames-card h3:hover{
+    color: #121D32; 
+    transform: scale(1.05); 
+}
 
 .exames-card p {
     font-size: 14px;
@@ -84,7 +111,7 @@
 }
 
 .exames-button {
-    background: #007bff;
+    background-color: #4BC6F8;
     color: white;
     font-weight: bold;
     padding: 10px 15px;
@@ -95,7 +122,8 @@
 }
 
 .exames-button:hover {
-    background: #0056b3;
+    background-color: #121D32; 
+    transform: scale(1.05); 
 }
 
 .exames-grid {

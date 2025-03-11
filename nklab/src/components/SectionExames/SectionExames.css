@@ -8,7 +8,7 @@
   .section-title {
     text-align: center;
     margin-bottom: 100px; /* Espaçamento entre o título e a grade */
-    font-size: 1.5em; /* Aumentei o tamanho da fonte do título */
+    font-size: 2rem; /* Aumentei o tamanho da fonte do título */
     font-weight: bold;
   }
   
@@ -29,12 +29,14 @@
     border-left: 30px solid #31AFE3;
     width: 400px;
     height: 70px;
-    gap: 25px; /* Espaçamento entre o ícone e o texto */
+    gap: 25px; 
     
 }
   
   .exam-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */ 
+    border-left: 30px solid #121D32;
+    transform: scale(1.05); 
   }
   
   

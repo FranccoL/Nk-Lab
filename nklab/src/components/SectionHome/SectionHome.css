@@ -1,91 +1,93 @@
 .section-home {
   width: 100%;
-  min-height: 100vh;
-  background-color: #f0f4fa;
+  height: 580px;
+  background: linear-gradient(to bottom, #29a3ef, #364867); /* Degradê dinâmico */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  position: relative;
+  z-index: 1; /* Certifique-se de que está acima do header */
 }
 
-.container {
+/* Estilização do container principal */
+.container-home {
   display: flex;
+  height: 480px;
   justify-content: space-between;
   align-items: center;
-  background-color: #e3eaf4;
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
   width: 90%;
-  margin-right: 45px;
-}
-
-.blue-box {
-  width: 650px;
-  height: 500px;
-  background-color: #29a3ef00;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1200px;
   
 }
 
-.microscope-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 100px;
+/* Estilização da imagem do lado esquerdo */
+.image-container {
+  flex: 1; /* Ocupa metade do espaço */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.side-image {
+  width: 100%;
+  height: 500px;
+ 
+}
+
+/* Ajustando o conteúdo para ocupar o lado direito */
 .content {
-  max-width: 500px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  margin-left: 40px;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .logo {
-  width: 400px;
-  margin-bottom: 30px;
+  width: 200px;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #000;
+  color: black;
+  margin-bottom: 10px;
 }
 
-
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 10px;
-  
+  color: black;
+  margin-bottom: 15px;
 }
 
 .description {
   font-size: 1rem;
   color: #4BC6F8;
-  margin-top: 10px;
-
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .contact-button {
   margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
+  padding: 15px 30px;
+  background-color: #121D32;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-  width: 200px;
+  font-size: 1rem;
 }
 
 .contact-button:hover {
@@ -114,4 +116,26 @@
 .whatsapp-icon {
   width: 40px;
   height: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-home {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image-container {
+    margin-bottom: 20px;
+  }
+
+  .side-image {
+    max-width: 250px;
+  }
+
+  .content {
+    margin-left: 0;
+  }
 }

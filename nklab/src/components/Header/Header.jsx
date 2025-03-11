@@ -27,7 +27,7 @@ function Header() {
                             <li><Link to="/sobrenos" onClick={toggleMenu}>Sobre Nós</Link></li>
                             <li><Link to="/blog" onClick={toggleMenu}>Blog</Link></li> {/* Alterado aqui */}
                         </ul>
-                        <button className="btResultado" onClick={toggleMenu}>Resultado de exames</button>
+                        <Link to="/login-page" className="btResultado" onClick={toggleMenu}>Resultado de exames</Link>
                     </nav>
                 </div>
             </div>
