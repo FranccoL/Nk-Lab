@@ -1,3 +1,4 @@
+/* Estilização da seção principal */
 .section-home {
   width: 100%;
   height: 580px;
@@ -22,21 +23,20 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 1200px;
-  
 }
 
-/* Estilização da imagem do lado esquerdo */
-.image-container {
+/* Estilização do vídeo do lado esquerdo */
+.video-container {
   flex: 1; /* Ocupa metade do espaço */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.side-image {
+.side-video {
   width: 100%;
-  height: 500px;
- 
+  height: 500px; /* Ajuste a altura do vídeo para corresponder à imagem */
+  object-fit: cover; /* Garante que o vídeo cubra o espaço sem distorção */
 }
 
 /* Ajustando o conteúdo para ocupar o lado direito */
@@ -127,12 +127,12 @@
     padding: 20px;
   }
 
-  .image-container {
+  .video-container {
     margin-bottom: 20px;
   }
 
-  .side-image {
-    max-width: 250px;
+  .side-video {
+    max-width: 250px; /* Ajuste a largura do vídeo */
   }
 
   .content {

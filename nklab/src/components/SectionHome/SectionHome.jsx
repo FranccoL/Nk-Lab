@@ -4,9 +4,16 @@ function SectionHome() {
   return (
     <section className="section-home">
       <div className="container-home">
-        {/* Imagem do lado esquerdo */}
-        <div className="image-container">
-          <img src="/imgHome.svg" alt="Imagem ilustrativa" className="side-image" />
+        {/* Vídeo do lado esquerdo */}
+        <div className="video-container">
+          <video
+            className="side-video"
+            src="/video.mp4" // Substitua pelo caminho do seu vídeo
+            alt="Vídeo ilustrativo"
+            autoPlay
+            loop
+            muted
+          />
         </div>
 
         {/* Conteúdo do lado direito */}
