@@ -18,7 +18,7 @@ function ExamesPage() {
       </div>
 
       <div className="exames-container d-flex jc-space-between">
-        <img src="/imgGato.svg" alt="" className="exames-logo"/>
+        <img src="/maquina.svg" alt="" className="exames-logo"/>
         <div className="exames-text d-flex jc-center flex-column">
           <h1>Exames laboratoriais de alta precisão para a saúde do seu pet!</h1>
           <p>Nosso compromisso é entregar diagnósticos confiáveis com tecnologia e os altos padrões de qualidade. Destacamos nosso hemograma de excelência, realizado conforme os critérios da American Society for Veterinary Clinical Pathology (ASVCP) e com colorações de alta qualidade, garantindo uma análise detalhada e precisa. <br />

@@ -23,7 +23,7 @@ function AdminDashboard() {
       return;
     }
     try {
-      const response = await axios.post("/api/tokens/generate-token", {
+      await axios.post("/api/tokens/generate-token", {
         cpf,
         tutor,
         animal,
@@ -62,7 +62,6 @@ function AdminDashboard() {
     <div className="dashboard-container">
       <h1 className="dashboard-title">Painel do Administrador</h1>
 
-      {/* Formulário para gerar token */}
       <form onSubmit={handleGenerateToken} className="form-container">
         <input
           type="text"
@@ -128,17 +127,15 @@ function AdminDashboard() {
           required
           className="input-field"
         />
-        <button type="submit" className="input-field">Gerar Token</button>
+        <button type="submit" className="button-primary">Gerar Token</button>
       </form>
 
-      {/* Exibir o CPF e mensagens */}
       {cpf && (
         <div className="message">
           <p><strong>Token gerado com CPF:</strong> {cpf}</p>
         </div>
       )}
 
-      {/* Formulário para anexar o exame */}
       {cpf && (
         <form onSubmit={handleUploadExam} className="form-container">
           <input
@@ -147,12 +144,11 @@ function AdminDashboard() {
             required
             className="input-field"
           />
-          <button type="submit" className="input-field">Anexar Exame (PDF)</button>
+          <button type="submit" className="button-secondary">Anexar Exame (PDF)</button>
         </form>
       )}
 
-      {/* Mensagem de erro ou sucesso */}
-      {message && <p className={message.includes("sucesso") ? "success" : ""}>{message}</p>}
+      {message && <p className={message.includes("sucesso") ? "success" : "error"}>{message}</p>}
     </div>
   );
 }

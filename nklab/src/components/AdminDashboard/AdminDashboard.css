@@ -1,5 +1,3 @@
-
-
 .dashboard-container {
   width: 80%;
   margin: 20px auto;
@@ -10,7 +8,6 @@
   transition: width 0.3s ease;
 }
 
-/* Estilo do título principal */
 .dashboard-title {
   text-align: center;
   font-size: 2rem;
@@ -18,9 +15,7 @@
   margin-bottom: 20px;
 }
 
-/* Estilo para os campos de input e botões */
-.input-field,
-button {
+.input-field {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -29,29 +24,51 @@ button {
   font-size: 1rem;
 }
 
-/* Botões */
-button {
+.button-primary {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
   background-color: #31AFE3;
   color: white;
   cursor: pointer;
 }
 
-button:hover {
+.button-primary:hover {
   background-color: #121D32;
 }
 
-/* Mensagens de erro ou sucesso */
+.button-secondary {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.button-secondary:hover {
+  background-color: #388E3C;
+}
+
 p {
   font-size: 1rem;
   text-align: center;
-  color: #ff5722; /* Cor laranja para mensagens de erro */
 }
 
 p.success {
-  color: #4caf50; /* Cor verde para mensagens de sucesso */
+  color: #4caf50;
 }
 
-/* Formulários de entrada */
+p.error {
+  color: #ff5722;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -60,42 +77,34 @@ p.success {
   margin: 0 auto;
 }
 
-/* Mensagens informativas */
 .message {
   font-size: 1rem;
   margin-top: 20px;
   color: #333;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .dashboard-container {
-    width: 95%; /* Ajusta a largura para 95% em telas pequenas */
-    padding: 15px; /* Menos padding para ajustar ao espaço */
+    width: 95%;
+    padding: 15px;
   }
 
   .dashboard-title {
-    font-size: 1.6rem; /* Tamanho de fonte um pouco menor */
+    font-size: 1.6rem;
   }
 
-  /* Estilo dos inputs e botões */
   .input-field,
-  button {
-    font-size: 0.9rem; /* Reduz o tamanho da fonte para dispositivos móveis */
-    padding: 8px; /* Diminui o padding dos campos */
-  }
-
-  /* Mensagens de erro ou sucesso */
-  p {
-    font-size: 0.9rem; /* Reduz o tamanho da fonte das mensagens */
+  .button-primary,
+  .button-secondary {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 
   .message {
-    font-size: 0.9rem; /* Ajusta o tamanho da fonte das mensagens */
+    font-size: 0.9rem;
   }
 
-  /* Para a exibição do botão de anexar exame */
   .form-container {
-    gap: 10px; /* Diminui o espaço entre os campos */
+    gap: 10px;
   }
 }
