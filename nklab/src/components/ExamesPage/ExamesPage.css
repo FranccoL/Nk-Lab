@@ -17,11 +17,6 @@
     
 }
 
-
-
-
-
-
 .exames-logo {
     position: absolute;
     width: 500px;
@@ -135,12 +130,112 @@
 
 @media (max-width: 900px) {
     .exames-grid {
-        grid-template-columns: repeat(2, 1fr); /* Reduz para 2 colunas em telas menores */
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores que 900px */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajuste para tela mobile */
+    .exames-container {
+        flex-direction: column; /* Faz a imagem ficar em cima do texto */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .exames-logo {
+        position: relative; /* Para que o layout funcione corretamente em telas menores */
+        margin-left: 0;
+        margin-top: 0;
+        width: 200px; 
+    }
+
+    .exames-text {
+        width: 90%; /* Ajuste a largura do texto */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .exames-text h1 {
+        font-size: 20px;
+    }
+
+    .exames-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .exames-header {
+        width: 100%; /* Cabeçalho ocupa toda a largura */
+        padding: 10px;
+        height: 60px; /* Ajuste de altura */
+    }
+
+    .exames-header h2 {
+        font-size: 20px; /* Tamanho da fonte do título menor */
+    }
+
+    .exames-logo {
+        position: relative; /* Para que o layout funcione corretamente em telas menores */
+        left: -120px;
+        width: 200px;
+        margin-bottom: 20px; 
+    }
+
+    .exames-text {
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 0;
+        padding: 0 20px;
+        order: 2; /* Coloca o texto após a imagem do gato */
+    }
+
+    .exames-text h1 {
+        font-size: 20px;
+    }
+
+    .exames-text p {
+        font-size: 16px;
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    .exames-section {
+        padding: 20px 10px;
+    }
+
+    .exames-title {
+        font-size: 24px; /* Ajuste o tamanho do título */
+        margin-top: 40px;
+    }
+
+    .exames-card {
+        padding: 10px; /* Reduz o padding para melhor ajuste do conteúdo */
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+        width: 100%; /* Faz o card ocupar toda a largura disponível */
+        box-sizing: border-box; /* Inclui o padding dentro da largura total do card */
+    }
+
+    .exames-card h3 {
+        font-size: 18px; /* Ajusta o tamanho do título para telas menores */
+        margin-bottom: 10px; /* Adiciona um espaço abaixo do título */
+    }
+
+    .exames-card p {
+        font-size: 14px; /* Reduz o tamanho da fonte do texto */
+        line-height: 1.5; /* Ajusta a altura da linha para melhorar a legibilidade */
+    }
+
+    .exames-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .exames-grid {
+        grid-template-columns: 1fr; /* Apenas uma coluna para os cards em telas menores */
+        gap: 20px; /* Adiciona espaçamento entre os cards */
     }
 }
 
 @media (max-width: 600px) {
     .exames-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 coluna para telas pequenas */
+        grid-template-columns: 1fr; /* 1 coluna no mobile */
     }
 }

@@ -3,7 +3,7 @@ import axios from "axios";
 import './AdminDashboard.css';
 
 function AdminDashboard() {
-  const [cpf, setCpf] = useState(""); // Alteração: CPF ao invés de token
+  const [cpf, setCpf] = useState("");
   const [tutor, setTutor] = useState("");
   const [animal, setAnimal] = useState("");
   const [idadeAno, setIdadeAno] = useState("");
@@ -14,10 +14,8 @@ function AdminDashboard() {
   const [examFile, setExamFile] = useState(null);
   const [message, setMessage] = useState("");
 
-  // Calcula a idade total em anos
   const idade = idadeAno + (idadeMeses / 12);
 
-  // Função para gerar o token usando o CPF
   const handleGenerateToken = async (e) => {
     e.preventDefault();
     if (!cpf) {
@@ -25,12 +23,11 @@ function AdminDashboard() {
       return;
     }
     try {
-      // Envia o CPF como token
       const response = await axios.post("/api/tokens/generate-token", {
-        cpf,  // Envia o CPF como o token
+        cpf,
         tutor,
         animal,
-        idade, // Envia a idade total em anos
+        idade,
         raca,
         sexo,
         especie,
@@ -41,10 +38,9 @@ function AdminDashboard() {
     }
   };
 
-  // Função para fazer o upload do exame
   const handleUploadExam = async (e) => {
     e.preventDefault();
-    if (!cpf || !examFile) {  // Verifica se o CPF e o exame foram fornecidos
+    if (!cpf || !examFile) {
       setMessage("Preencha todos os campos");
       return;
     }
@@ -63,17 +59,18 @@ function AdminDashboard() {
   };
 
   return (
-    <div>
-      <h1>Painel do Administrador</h1>
+    <div className="dashboard-container">
+      <h1 className="dashboard-title">Painel do Administrador</h1>
 
       {/* Formulário para gerar token */}
-      <form onSubmit={handleGenerateToken}>
+      <form onSubmit={handleGenerateToken} className="form-container">
         <input
           type="text"
           value={cpf}
           onChange={(e) => setCpf(e.target.value)}
           placeholder="CPF do Tutor"
           required
+          className="input-field"
         />
         <input
           type="text"
@@ -81,6 +78,7 @@ function AdminDashboard() {
           onChange={(e) => setTutor(e.target.value)}
           placeholder="Tutor"
           required
+          className="input-field"
         />
         <input
           type="text"
@@ -88,6 +86,7 @@ function AdminDashboard() {
           onChange={(e) => setAnimal(e.target.value)}
           placeholder="Animal"
           required
+          className="input-field"
         />
         <input
           type="number"
@@ -95,6 +94,7 @@ function AdminDashboard() {
           onChange={(e) => setIdadeAno(e.target.value)}
           placeholder="Idade (anos)"
           required
+          className="input-field"
         />
         <input
           type="number"
@@ -102,6 +102,7 @@ function AdminDashboard() {
           onChange={(e) => setIdadeMeses(e.target.value)}
           placeholder="Idade (meses)"
           required
+          className="input-field"
         />
         <input
           type="text"
@@ -109,6 +110,7 @@ function AdminDashboard() {
           onChange={(e) => setRaca(e.target.value)}
           placeholder="Raça"
           required
+          className="input-field"
         />
         <input
           type="text"
@@ -116,6 +118,7 @@ function AdminDashboard() {
           onChange={(e) => setSexo(e.target.value)}
           placeholder="Sexo"
           required
+          className="input-field"
         />
         <input
           type="text"
@@ -123,32 +126,33 @@ function AdminDashboard() {
           onChange={(e) => setEspecie(e.target.value)}
           placeholder="Espécie"
           required
+          className="input-field"
         />
-        <button type="submit">Gerar Token</button>
+        <button type="submit" className="input-field">Gerar Token</button>
       </form>
 
-      {/* Exibir a mensagem com o CPF */}
+      {/* Exibir o CPF e mensagens */}
       {cpf && (
-        <div>
+        <div className="message">
           <p><strong>Token gerado com CPF:</strong> {cpf}</p>
         </div>
       )}
 
       {/* Formulário para anexar o exame */}
       {cpf && (
-        <form onSubmit={handleUploadExam}>
+        <form onSubmit={handleUploadExam} className="form-container">
           <input
             type="file"
             onChange={(e) => setExamFile(e.target.files[0])}
             required
+            className="input-field"
           />
-          <button type="submit">Anexar Exame (PDF)</button>
+          <button type="submit" className="input-field">Anexar Exame (PDF)</button>
         </form>
       )}
 
-      {/* Exibir mensagens */}
-      {message && <p>{message}</p>}
-      
+      {/* Mensagem de erro ou sucesso */}
+      {message && <p className={message.includes("sucesso") ? "success" : ""}>{message}</p>}
     </div>
   );
 }

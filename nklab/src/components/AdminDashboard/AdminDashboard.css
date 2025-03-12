@@ -1,145 +1,101 @@
-.admin-dashboard-wrapper {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;     /* Centraliza verticalmente */
-  height: 300vh;           /* Ocupa toda a altura da tela */
-  background-color: #f4f4f9; /* Cor de fundo suave para contrastar com os elementos */
+
+
+.dashboard-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: width 0.3s ease;
 }
 
-.admin-dashboard {
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px; /* Borda mais arredondada para um visual moderno */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 700px;
+/* Estilo do título principal */
+.dashboard-title {
   text-align: center;
+  font-size: 2rem;
+  color: #2e3b4e;
+  margin-bottom: 20px;
 }
 
-.admin-dashboard h1 {
-  color: #121D32; /* Cor escura para o título */
-  margin-bottom: 30px;
-  font-size: 28px;
-  font-weight: bold;
+/* Estilo para os campos de input e botões */
+.input-field,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
+/* Botões */
+button {
+  background-color: #31AFE3;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #121D32;
+}
+
+/* Mensagens de erro ou sucesso */
+p {
+  font-size: 1rem;
+  text-align: center;
+  color: #ff5722; /* Cor laranja para mensagens de erro */
+}
+
+p.success {
+  color: #4caf50; /* Cor verde para mensagens de sucesso */
+}
+
+/* Formulários de entrada */
 .form-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.input-group {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.admin-dashboard input,
-.admin-dashboard select {
-  padding: 15px;
-  border: 2px solid #ccc;
-  border-radius: 10px; /* Bordas mais arredondadas */
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: #121D32; /* Cor do texto dos inputs */
-  background-color: #f7f7f7; /* Cor de fundo suave para os inputs */
-  transition: all 0.3s ease; /* Transição suave */
-  width: 90%;
-}
-
-.admin-dashboard input:focus,
-.admin-dashboard select:focus {
-  border-color: #27AAE1; /* Borda azul clara quando o input ou select estiver em foco */
-  background-color: #fff; /* Fundo mais claro quando o input estiver em foco */
-  box-shadow: 0 0 5px rgba(39, 170, 225, 0.5); /* Sombra sutil */
-}
-
-.admin-dashboard select {
-  -webkit-appearance: none; /* Remove a aparência padrão em alguns navegadores */
-  -moz-appearance: none;
-  appearance: none;
-  padding-right: 30px; /* Espaço para o ícone de seta */
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath d="M4 6l4 4 4-4" fill="none" stroke="%23121D32" stroke-width="2" /%3E%3C/svg%3E') no-repeat right center;
-  background-size: 20px;
-  cursor: pointer;
-}
-
-.admin-dashboard select:hover {
-  border-color: #27AAE1; /* Borda azul clara ao passar o mouse */
-}
-
-.admin-dashboard button {
-  padding: 14px 25px;
-  border: none;
-  background-color: #27AAE1; /* Cor azul para o botão */
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
-  margin-bottom: 50px;
-}
-
-.admin-dashboard button:hover {
-  background-color: #1b8dbf; /* Cor um pouco mais escura no hover */
-  transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
-}
-
-.admin-dashboard button:active {
-  background-color: #167cb3; /* Cor ainda mais escura ao clicar */
-}
-
-.btn-primary {
-  width: 100%; /* Botão ocupar toda a largura disponível */
-}
-
-.upload-form {
-  margin-top: 30px;
-}
-
-.token-message {
-  color: #28a745; /* Cor verde para mensagem de sucesso */
-  margin-top: 20px;
-  font-size: 16px;
-}
-
+/* Mensagens informativas */
 .message {
-  color: #dc3545; /* Cor vermelha para mensagens de erro */
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-.admin-dashboard input[type="file"] {
-  padding: 12px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #f7f7f7;
-  transition: all 0.3s ease;
-}
-
-.admin-dashboard input[type="file"]:hover {
-  border-color: #27AAE1; /* Cor da borda do input de arquivo ao passar o mouse */
-}
-
-.buttonBlogAdmin {
-  text-decoration: none;
-  padding: 14px 25px;
-  border: none;
-  background-color: #121D32; /* Cor azul para o botão */
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
+  font-size: 1rem;
   margin-top: 20px;
-  display: inline-block;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #333;
 }
 
-.buttonBlogAdmin:hover {
-  background-color: #167cb3; /* Cor mais escura ao passar o mouse */
-  transform: scale(1.05); /* Leve aumento de tamanho no hover */
-}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 95%; /* Ajusta a largura para 95% em telas pequenas */
+    padding: 15px; /* Menos padding para ajustar ao espaço */
+  }
 
-.buttonBlogAdmin:active {
-  background-color: #1b8dbf; /* Cor ainda mais escura ao clicar */
+  .dashboard-title {
+    font-size: 1.6rem; /* Tamanho de fonte um pouco menor */
+  }
+
+  /* Estilo dos inputs e botões */
+  .input-field,
+  button {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte para dispositivos móveis */
+    padding: 8px; /* Diminui o padding dos campos */
+  }
+
+  /* Mensagens de erro ou sucesso */
+  p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte das mensagens */
+  }
+
+  .message {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte das mensagens */
+  }
+
+  /* Para a exibição do botão de anexar exame */
+  .form-container {
+    gap: 10px; /* Diminui o espaço entre os campos */
+  }
 }

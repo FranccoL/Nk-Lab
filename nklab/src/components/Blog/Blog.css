@@ -1,64 +1,140 @@
 /* Blog.css */
 .blog-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 150px;
-  }
+  display: flex;
+  flex-wrap: wrap; /* Permite que os posts sejam dispostos em várias linhas */
+  justify-content: space-between;
+  gap: 20px;
+  padding: 150px;
+}
+
+.blog-header {
+  display: flex;
+  flex-direction: column; /* Coloca o header em uma coluna */
+  width: 60%; /* Ocupa toda a largura disponível */
+  background: linear-gradient(to right, rgba(49, 175, 227, 0.8), rgba(115, 115, 115, 0.1));
+  padding: 15px;
+  text-align: start;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
   
-  .blog-post {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+  margin: 0;
+  right: 150px;
+  bottom: 100px;
+}
+
+.blog-header h2 {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px; /* Ajuste o espaçamento */
+}
+
+.blog-post {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-post h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blog-post p {
+  color: #777;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.blog-post a {
+  color: #007BFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    width: 500px;
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
   }
-  
-  .blog-post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .blog-post img {
-    width: 100%;
-    height: 300px; /* Ajuste a altura de acordo com sua necessidade */
-    object-fit: cover; /* A imagem irá cobrir todo o espaço do contêiner sem distorcer */
-    border-radius: 8px;
-  }
-  
-  
-  .blog-post h2 {
+
+  .blog-header {
+    width: 30%;
+    text-align: center; /* Este alinhamento pode ser removido do h2 */
+    margin-left: -20px;
+    padding: 10px;
     font-size: 1.2rem;
-    color: #333;
-    margin: 10px 0;
-    white-space: nowrap; /* Impede a quebra de linha no título */
-    overflow: hidden; /* Esconde o conteúdo extra */
-    text-overflow: ellipsis; /* Adiciona '...' no final do texto que ultrapassar */
+    position: relative;
+    bottom: 0;
+    height: 30px; /* Aumente a altura para garantir espaço suficiente */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
   }
   
-  .blog-post p {
-    color: #777;
+  .blog-header h2 {
+    margin-bottom: 0; /* Remove qualquer margem inferior extra */
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* Garante que o texto fique centralizado horizontalmente */
+    align-items: center; /* Garante que o texto fique centralizado verticalmente */
+    text-align: center; /* Não é necessário se estiver usando flexbox */
+  }
+
+  .blog-post {
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+  }
+
+  .blog-post img {
+    height: 200px;
+  }
+
+  .blog-post h2 {
     font-size: 1rem;
-    overflow: hidden; /* Esconde o texto que ultrapassar o limite */
-    text-overflow: ellipsis; /* Adiciona '...' no final do texto que ultrapassar */
-    display: -webkit-box; /* Para truncar o texto */
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    white-space: normal;
   }
-  
+
+  .blog-post p {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 4;
+  }
+
   .blog-post a {
-    color: #007BFF;
-    font-weight: bold;
-    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
   }
-  
-
-  .blog-post a:hover {
-    text-decoration: underline;
-  }
-
-  
+}

@@ -1,9 +1,33 @@
-.convenio{
+.container-Parceria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Garante que o conteúdo fique centralizado */
     margin-top: 100px;
- 
 }
 
-.logoParceria{
+.convenio {
+    max-width: 100%;
+}
+
+.convenio h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.logoParceria {
     width: 250px;
-    margin-left: 50px;
+    margin: 0 auto; /* Centraliza a logo */
+    display: block;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .convenio h1 {
+        font-size: 22px;
+    }
+
+    .logoParceria {
+        width: 180px; /* Reduz a logo para melhor proporção */
+    }
 }

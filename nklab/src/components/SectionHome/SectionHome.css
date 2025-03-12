@@ -120,22 +120,83 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .section-home {
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 30px 15px;
+    width: 93%;
+  }
+
   .container-home {
-    flex-direction: column;
+    flex-direction: column; /* Empilha os elementos */
     height: auto;
     text-align: center;
     padding: 20px;
+    width: 100%;
+    max-width: 100vw;
+    
+    box-shadow: none; /* Remove sombra para um visual mais clean */
+    background-color: transparent; /* Remove o fundo branco translúcido */
   }
 
   .video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
   }
 
   .side-video {
-    max-width: 250px; /* Ajuste a largura do vídeo */
+    width: 100%;
+    max-width: 320px; /* Ajusta a largura do vídeo */
+    height: auto;
+    border-radius: 10px;
   }
 
   .content {
     margin-left: 0;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    width: 150px; /* Reduz a logo para se ajustar melhor */
+  }
+
+  .title {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* WhatsApp flutuante ajustado para mobile */
+  .whatsapp-fly {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px;
+  }
+
+  .whatsapp-icon {
+    width: 35px;
+    height: 35px;
   }
 }

@@ -56,27 +56,34 @@ function SobreNosPage() {
       <div className="carrossel-wrapper">
         <h2>O que nossos clientes dizem</h2>
         <div className="carrossel-container">
-          <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={20}
-            slidesPerView={3}
-            navigation
-            pagination={{ clickable: true }}
-            loop={false}
-            breakpoints={{
-              1024: { slidesPerView: 3 },
-              768: { slidesPerView: 2 },
-              480: { slidesPerView: 1 },
-            }}
-          >
-            {avaliacoes.map((avaliacao, index) => (
-              <SwiperSlide key={index} className="avaliacao-card">
-                <img src={avaliacao.foto} alt={avaliacao.nome} className="foto-avaliador" />
-                <p>{`"${avaliacao.texto}"`}</p>
-                <h4>- {avaliacao.nome}</h4>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <Swiper
+  modules={[Navigation, Pagination]}
+  spaceBetween={20}
+  slidesPerView={1}  // No mobile, apenas 1 card por vez
+  navigation
+  pagination={{ clickable: true }}
+  loop={false}
+  breakpoints={{
+    1024: {
+      slidesPerView: 3, // Em telas maiores, mostra 3 cards por vez
+    },
+    768: {
+      slidesPerView: 1, // No mobile (abaixo de 768px), mostra 1 card por vez
+    },
+    480: {
+      slidesPerView: 1, // Em telas muito pequenas (abaixo de 480px), ainda será 1 card por vez
+    },
+  }}
+>
+  {avaliacoes.map((avaliacao, index) => (
+    <SwiperSlide key={index} className="avaliacao-card">
+      <img src={avaliacao.foto} alt={avaliacao.nome} className="foto-avaliador" />
+      <p>{`"${avaliacao.texto}"`}</p>
+      <h4>- {avaliacao.nome}</h4>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
         </div>
       </div>
     </div>

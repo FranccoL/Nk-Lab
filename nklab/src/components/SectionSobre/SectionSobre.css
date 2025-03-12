@@ -61,3 +61,54 @@
     transform: scale(1.05);
     
   }
+
+
+  @media (max-width: 768px) {
+    .sectionSobre {
+      padding: 20px;
+    }
+  
+    .containerSobre {
+      flex-direction: column; /* Empilha os elementos no mobile */
+      align-items: center; /* Centraliza os itens */
+      text-align: center;
+    }
+  
+    .backSobre {
+      display: none;
+    }
+  
+    .logoSobre {
+      position: static; /* Remove o posicionamento absoluto */
+      margin: -80px auto 20px; /* Ajusta a posição da logo */
+      width: 250px; /* Diminui o tamanho da logo */
+    
+    }
+  
+    .sobreText {
+      margin-top: 20px;
+      padding: 0 20px; /* Adiciona espaço nas laterais */
+    }
+  
+    .sobreText h1 {
+      font-size: 32px; /* Reduz um pouco o tamanho do título */
+      margin: 0 auto 10px;
+      
+    }
+  
+    .sobreText p {
+      font-size: 18px; /* Ajusta o tamanho do texto */
+      width: 100%; /* Ocupa toda a largura disponível */
+      line-height: 160%;
+      margin: 0 auto 10px;
+    }
+  
+    .bttSobre {
+      width: 100%; /* Ocupa toda a largura disponível */
+      max-width: 250px; /* Define um limite para não ficar exagerado */
+      font-size: 18px; /* Ajusta o tamanho da fonte */
+      height: 45px; /* Reduz um pouco a altura */
+      margin: 20px auto; /* Centraliza */
+    }
+  }
+  
