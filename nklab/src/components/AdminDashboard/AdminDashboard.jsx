@@ -1,8 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import './AdminDashboard.css';
+
 function AdminDashboard() {
-  const [token, setToken] = useState("");
+  const [cpf, setCpf] = useState(""); // Alteração: CPF ao invés de token
   const [tutor, setTutor] = useState("");
   const [animal, setAnimal] = useState("");
   const [idadeAno, setIdadeAno] = useState("");
@@ -16,11 +17,17 @@ function AdminDashboard() {
   // Calcula a idade total em anos
   const idade = idadeAno + (idadeMeses / 12);
 
-  // Função para gerar o token
+  // Função para gerar o token usando o CPF
   const handleGenerateToken = async (e) => {
     e.preventDefault();
+    if (!cpf) {
+      setMessage("Por favor, insira o CPF do tutor.");
+      return;
+    }
     try {
+      // Envia o CPF como token
       const response = await axios.post("/api/tokens/generate-token", {
+        cpf,  // Envia o CPF como o token
         tutor,
         animal,
         idade, // Envia a idade total em anos
@@ -28,8 +35,7 @@ function AdminDashboard() {
         sexo,
         especie,
       });
-      setToken(response.data.token);  // Token gerado
-      setMessage(`Token gerado: ${response.data.token}`);
+      setMessage(`Token gerado com o CPF: ${cpf}`);
     } catch (error) {
       setMessage("Erro ao gerar token.");
     }
@@ -38,16 +44,16 @@ function AdminDashboard() {
   // Função para fazer o upload do exame
   const handleUploadExam = async (e) => {
     e.preventDefault();
-    if (!token || !examFile) {
+    if (!cpf || !examFile) {  // Verifica se o CPF e o exame foram fornecidos
       setMessage("Preencha todos os campos");
       return;
     }
 
     const formData = new FormData();
-    formData.append("exam", examFile);  // Aqui está o campo correto 'exam'
+    formData.append("exam", examFile);
 
     try {
-      await axios.post(`/api/tokens/upload-exam/${token}`, formData, {
+      await axios.post(`/api/tokens/upload-exam/${cpf}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setMessage("Exame anexado com sucesso!");
@@ -62,6 +68,13 @@ function AdminDashboard() {
 
       {/* Formulário para gerar token */}
       <form onSubmit={handleGenerateToken}>
+        <input
+          type="text"
+          value={cpf}
+          onChange={(e) => setCpf(e.target.value)}
+          placeholder="CPF do Tutor"
+          required
+        />
         <input
           type="text"
           value={tutor}
@@ -114,15 +127,15 @@ function AdminDashboard() {
         <button type="submit">Gerar Token</button>
       </form>
 
-      {/* Exibir o token gerado */}
-      {token && (
+      {/* Exibir a mensagem com o CPF */}
+      {cpf && (
         <div>
-          <p><strong>Token gerado:</strong> {token}</p>
+          <p><strong>Token gerado com CPF:</strong> {cpf}</p>
         </div>
       )}
 
       {/* Formulário para anexar o exame */}
-      {token && (
+      {cpf && (
         <form onSubmit={handleUploadExam}>
           <input
             type="file"
@@ -135,6 +148,7 @@ function AdminDashboard() {
 
       {/* Exibir mensagens */}
       {message && <p>{message}</p>}
+      
     </div>
   );
 }

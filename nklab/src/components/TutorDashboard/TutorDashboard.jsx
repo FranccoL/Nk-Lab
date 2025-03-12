@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const TutorDashboard = () => {
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState(''); // Aqui o token será o CPF
   const [message, setMessage] = useState('');
 
   const handleDownloadExam = async () => {
@@ -13,7 +13,7 @@ const TutorDashboard = () => {
 
     try {
       const response = await axios.get(`/api/tokens/download-exam/${token}`, {
-        responseType: "blob", // Importante para lidar com o arquivo binário
+        responseType: "blob",
       });
 
       if (response.status === 200) {
@@ -36,7 +36,7 @@ const TutorDashboard = () => {
       <h2>Painel do Tutor</h2>
       <input
         type="text"
-        placeholder="Insira o token"
+        placeholder="Insira o token (CPF)"
         value={token}
         onChange={(e) => setToken(e.target.value)}
       />

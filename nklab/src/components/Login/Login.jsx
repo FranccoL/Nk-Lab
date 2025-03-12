@@ -38,7 +38,7 @@ function Login() {
 
         {activeTab === "tutor" && (
             <form onSubmit={handleTutorLogin}>
-                <input type="text" name="token" placeholder="Token" required />
+                <input type="text" name="token" placeholder="Digite seu CPF, por gentileza." required />
                 <button type="submit">Entrar</button>
             </form>
             )}

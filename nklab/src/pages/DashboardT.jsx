@@ -7,6 +7,7 @@ function DashboardT() {
   const { token } = useParams(); // Captura o token da URL
   const [tokenData, setTokenData] = useState(null);
   const [error, setError] = useState("");
+  const [message, setMessage] = useState(""); // Adicionando mensagem de sucesso
 
   useEffect(() => {
     const fetchTokenData = async () => {
@@ -30,9 +31,10 @@ function DashboardT() {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const a = document.createElement("a");
       a.href = url;
-      a.download = "exame.pdf";
+      a.download = "exame.pdf"; // Nome do arquivo para download
       document.body.appendChild(a);
       a.click();
+      setMessage("Exame baixado com sucesso!"); // Mensagem de sucesso
     } catch (err) {
       setError("Erro ao baixar o exame.");
     }
@@ -44,6 +46,7 @@ function DashboardT() {
       <p><strong>Token:</strong> {token}</p>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
+      {message && <p style={{ color: "green" }}>{message}</p>} {/* Mensagem de sucesso */}
 
       {tokenData ? (
         <>

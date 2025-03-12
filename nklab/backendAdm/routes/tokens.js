@@ -1,4 +1,3 @@
-// routes/tokens.js
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
@@ -27,24 +26,18 @@ const fileFilter = (req, file, cb) => {
 // Criar o middleware do multer
 const upload = multer({ storage, fileFilter });
 
-// Função para gerar o token (sequência aleatória)
-const generateToken = () => {
-  return Math.random().toString(36).substr(2, 9); // Apenas sequência aleatória de 9 caracteres
-};
-
-// Rota para gerar o token
+// Rota para gerar o token (agora será o CPF do tutor)
 router.post('/generate-token', async (req, res) => {
-  const { tutor, animal, idade, raca, sexo, especie } = req.body;
+  const { cpf, tutor, animal, idade, raca, sexo, especie } = req.body;
 
-  // Verificar se todos os campos estão preenchidos
-  if (!tutor || !animal || !idade || !raca || !sexo || !especie) {
+  // Verificar se todos os campos estão preenchidos, incluindo o CPF
+  if (!cpf || !tutor || !animal || !idade || !raca || !sexo || !especie) {
     return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
   }
 
   try {
-    const token = generateToken(); // Gerar token aleatório
     const newToken = new TokenModel({
-      token,
+      token: cpf, // Usar o CPF como o token
       tutor,
       animal,
       idade,
@@ -55,7 +48,7 @@ router.post('/generate-token', async (req, res) => {
 
     // Salvar o token no banco de dados
     await newToken.save();
-    res.status(201).json({ token, message: 'Token gerado com sucesso!' });
+    res.status(201).json({ token: cpf, message: 'Token gerado com sucesso!' });
   } catch (error) {
     console.error("Erro ao gerar token:", error);
     res.status(500).json({ message: 'Erro ao gerar o token.' });
