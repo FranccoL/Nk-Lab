@@ -21,6 +21,7 @@
     position: absolute;
     width: 500px;
     height: auto;
+    margin-top: 100px;
 }
 
 .exames-text {
@@ -32,12 +33,15 @@
 .exames-text h1 {
     color: #27AAE1;
     font-size: 25px;
+    width: 900px;
+    margin-left: 60px;
 }
 
 .exames-text p {
     width: 600px;
     line-height: 180%;
     font-size: 22px;
+    margin-left: 140px;
 }
 
 /* Section Exames Cards */

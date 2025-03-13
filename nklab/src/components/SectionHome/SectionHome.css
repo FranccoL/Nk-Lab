@@ -1,4 +1,22 @@
-/* Estilização da seção principal */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.carousel-container {
+  width: 50%;
+  height: 60%; /* Faz o carrossel ocupar toda a altura do container */
+  margin-bottom: 150px;
+}
+.slick-slide img {
+  width: 100%;  /* Garante que as imagens ocupem 100% do container */
+  height: auto; /* Mantém a proporção das imagens */
+  object-fit: cover; /* Garante que as imagens cobrem todo o espaço sem distorcer */
+}
+
+.slick-container {
+  width: 100%;
+  max-width: 100%;  /* Garante que o carrossel ocupe 100% da largura do container */
+  height: 100%;
+}
 .section-home {
   width: 100%;
   height: 580px;

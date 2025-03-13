@@ -1,19 +1,47 @@
+
+import Slider from "react-slick";
 import "./SectionHome.css";
 
 function SectionHome() {
+  const settings = {
+    dots: true, // Mostrar pontos de navegação
+    infinite: true, // Rotação infinita
+    speed: 500, // Velocidade de transição
+    slidesToShow: 1, // Exibir uma imagem por vez
+    slidesToScroll: 1, // Mover uma imagem por vez
+    autoplay: true, // Iniciar o carrossel automaticamente
+    autoplaySpeed: 3000, // Definir tempo de exibição de cada imagem
+  };
+
   return (
     <section className="section-home">
       <div className="container-home">
-        {/* Vídeo do lado esquerdo */}
-        <div className="video-container">
-          <video
-            className="side-video"
-            src="/video.mp4" // Substitua pelo caminho do seu vídeo
-            alt="Vídeo ilustrativo"
-            autoPlay
-            loop
-            muted
-          />
+        {/* Carrossel no lugar do vídeo */}
+        <div className="carousel-container">
+          <Slider {...settings}>
+            <div>
+              <img
+                src="/usg.svg"
+                alt="Imagem 1"
+                className="carousel-image"
+              />
+            </div>
+            <div>
+              <img
+                src="/hemo.svg"
+                alt="Imagem 2"
+                className="carousel-image"
+              />
+            </div>
+            <div>
+              <img
+                src="/analise.svg"
+                alt="Imagem 3"
+                className="carousel-image"
+              />
+            </div>
+            {/* Adicione mais imagens conforme necessário */}
+          </Slider>
         </div>
 
         {/* Conteúdo do lado direito */}

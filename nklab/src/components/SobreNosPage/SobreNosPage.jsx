@@ -5,6 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+
+
+
 const avaliacoes = [
     { nome: "Ileana / Mamãe do Pedrinho", texto: "Sem palavras para descrever! Viramos clientes por causa do plano de saúde, mas agora somos fiéis para sempre! Desde o atendimento na recepção, até antes da coleta, durante e depois. Falo que Pedrinho ama fazer exame, mas com vocês ama mais ainda (...) entra feliz e sai ainda mais feliz depois de ser mimado com os petiscos!", foto: "/avaliacao-pedro.svg" },
     { nome: "Larissa/ Mamãe do Léo", texto: "Queria agradecer vocês por todo o cuidado com o nosso Léo! Começando desde a coleta até a liberação dos laudos, por toda atenção e carinho! Recomendo muuito! Nosso guerreirinho está ótimo! Um grande abraço!!", foto: "/avaliacao-leo.svg" },
@@ -27,7 +30,7 @@ function SobreNosPage() {
             <img src="/LOGOnk.svg" alt="Logo NK Laboratório" className="logoSobre2" />
 
             <div className="conteudoSobre d-flex">
-              <img src="/diagnostic.svg" alt="Imagem sobre nós" className="imagemLateral" />
+              <img src="/maquina.svg" alt="Imagem sobre nós" className="imagemLateral" />
               <div className="textoSobre">
                 <h2>
                   No NK Laboratório, acreditamos que um diagnóstico preciso faz toda a diferença na vida dos pets e no trabalho dos Médicos Veterinários. Nosso compromisso é oferecer resultados confiáveis, desde a coleta até a entrega do laudo, com tecnologia de ponta e dedicação.
