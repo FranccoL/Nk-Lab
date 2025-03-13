@@ -3,7 +3,7 @@ import "./SectionExames.css";
 function SectionExames() {
   return (
     <section className="section-exams">
-        <h2 className="section-title">Confira alguns exames</h2>
+        <h2 className="section-title">Confira nossos exames</h2>
         <div className="exams-grid">
           <div className="exam-card">
             <div className="exam-icon"><img src="/icons/Laboratory.svg" alt="Bioquímica" /></div>

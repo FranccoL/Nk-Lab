@@ -276,9 +276,6 @@
     margin-left: -800px;
   }
 
-  *{
-    border: red 1px solid;
-  }
   .conteudoSobre{
     display: flex;
     flex-direction: column;

@@ -48,7 +48,7 @@ function SobreNosPage() {
                   <br />🔬 Valores: Competência, eficiência, agilidade e inovação, sempre com amor e compromisso com nossos amigos peludos.
                 </h2>
               </div>
-              <img src="/diagnostic2.svg" alt="Imagem sobre nós" className="imagemLateral2" />
+              <img src="/imgVet.svg" alt="Imagem sobre nós" className="imagemLateral2" />
             </div>
 
             <h3>NK Laboratório – Excelência que transforma a saúde do seu pet!</h3>
