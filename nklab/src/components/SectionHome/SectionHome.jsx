@@ -49,9 +49,9 @@ function SectionHome() {
           <div className="logo-container">
             <img src="/LOGOnk.svg" alt="Logo" className="logo" />
           </div>
-          <h1 className="title">Cuidados veterinários com excelência</h1>
-          <p className="subtitle">Diagnósticos de ponta para a saúde do seu pet!</p>
-          <p className="description">
+          <h1 className="titleHome">Exames veterinários de excelência</h1>
+          <p className="subtitleHome">Diagnósticos de ponta para a saúde do seu pet!</p>
+          <p className="descriptionHome">
             Tecnologia de ponta e dedicação para um cuidado preciso. Descubra
             como podemos transformar a vida do seu melhor amigo.
           </p>
