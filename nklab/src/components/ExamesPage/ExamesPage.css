@@ -1,4 +1,31 @@
-/* Título "Sobre Nós" */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.carousel-container {
+  width: 60%;
+  height: 30%; /* Faz o carrossel ocupar toda a altura do container */
+  margin-top: 250px;
+  margin-left: 250px;
+  
+}
+.carousel-image{
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.slick-slide img {
+  width: 100%;  /* Garante que as imagens ocupem 100% do container */
+  height: auto; /* Mantém a proporção das imagens */
+  object-fit: cover; /* Garante que as imagens cobrem todo o espaço sem distorcer */
+}
+
+.slick-container {
+  width: 100%;
+  max-width: 100%;  /* Garante que o carrossel ocupe 100% da largura do container */
+  height: 100%;
+}
 .exames-header {
     width: 250px;
     background: linear-gradient(to right, rgba(49, 175, 227, 0.8), rgba(115, 115, 115, 0.1));
@@ -34,7 +61,7 @@
     color: #27AAE1;
     font-size: 25px;
     width: 900px;
-    margin-left: 60px;
+    margin-left: 200px;
 }
 
 .exames-text p {
@@ -51,6 +78,7 @@
     padding: 40px 20px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 100px;
 }
 
 .exames-title {

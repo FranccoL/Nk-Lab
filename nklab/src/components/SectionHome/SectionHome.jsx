@@ -1,47 +1,15 @@
-
-import Slider from "react-slick";
 import "./SectionHome.css";
 
 function SectionHome() {
-  const settings = {
-    dots: true, // Mostrar pontos de navegação
-    infinite: true, // Rotação infinita
-    speed: 500, // Velocidade de transição
-    slidesToShow: 1, // Exibir uma imagem por vez
-    slidesToScroll: 1, // Mover uma imagem por vez
-    autoplay: true, // Iniciar o carrossel automaticamente
-    autoplaySpeed: 3000, // Definir tempo de exibição de cada imagem
-  };
-
   return (
     <section className="section-home">
       <div className="container-home">
-        {/* Carrossel no lugar do vídeo */}
-        <div className="carousel-container">
-          <Slider {...settings}>
-            <div>
-              <img
-                src="/usg.svg"
-                alt="Imagem 1"
-                className="carousel-image"
-              />
-            </div>
-            <div>
-              <img
-                src="/hemo.svg"
-                alt="Imagem 2"
-                className="carousel-image"
-              />
-            </div>
-            <div>
-              <img
-                src="/analise.svg"
-                alt="Imagem 3"
-                className="carousel-image"
-              />
-            </div>
-            {/* Adicione mais imagens conforme necessário */}
-          </Slider>
+        {/* Vídeo no lugar do carrossel */}
+        <div className="video-container">
+          <video autoPlay loop muted className="home-video">
+            <source src="/video.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos.
+          </video>
         </div>
 
         {/* Conteúdo do lado direito */}
@@ -58,16 +26,6 @@ function SectionHome() {
           <button className="contact-button">Fale Conosco</button>
         </div>
       </div>
-
-      {/* Botão do WhatsApp */}
-      <a
-        href="https://wa.me/seu-numero"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-fly"
-      >
-        <img src="/WhatsAppNK.svg" alt="WhatsApp" className="whatsapp-icon" />
-      </a>
     </section>
   );
 }
