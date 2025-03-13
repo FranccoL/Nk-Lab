@@ -8,7 +8,7 @@
   .section-title {
     text-align: center;
     margin-bottom: 100px; /* Espaçamento entre o título e a grade */
-    font-size: 1.5em; /* Aumentei o tamanho da fonte do título */
+    font-size: 2rem; /* Aumentei o tamanho da fonte do título */
     font-weight: bold;
   }
   
@@ -29,12 +29,14 @@
     border-left: 30px solid #31AFE3;
     width: 400px;
     height: 70px;
-    gap: 25px; /* Espaçamento entre o ícone e o texto */
+    gap: 25px; 
     
 }
   
   .exam-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */ 
+    border-left: 30px solid #121D32;
+    transform: scale(1.05); 
   }
   
   
@@ -50,6 +52,38 @@
   }
 
   
+  @media (max-width: 768px) {
+    .section-exams {
+      padding: 20px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem; /* Reduz um pouco o tamanho do título */
+      margin-bottom: 50px; /* Menos espaço entre o título e os cards */
+    }
+  
+    .exams-grid {
+      grid-template-columns: 1fr; /* Exibe uma única coluna */
+      gap: 20px; /* Reduz o espaçamento entre os cards */
+      margin-right: 50px;
+    }
+  
+    .exam-card {
+      width: 100%; /* Ocupa toda a largura disponível */
+      height: auto; /* Permite que o tamanho do card se ajuste ao conteúdo */
+      padding: 15px;
+      gap: 15px; /* Reduz o espaçamento entre ícone e texto */
+    }
+  
+    .exam-icon img {
+      width: 40px; /* Ícones menores para melhor proporção */
+      height: 40px;
+    }
+  
+    .exam-card p {
+      font-size: 1rem; /* Texto ajustado para melhor legibilidade */
+    }
+  }
   
   
   

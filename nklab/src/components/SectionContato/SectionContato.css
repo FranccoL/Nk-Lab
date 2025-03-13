@@ -81,3 +81,60 @@
     padding: 20px;
 }
 
+@media (max-width: 768px) {
+    .sectionContato {
+      margin-top: 100px;
+      padding: 20px;
+    }
+  
+    .sectionContato h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .containerContato {
+      flex-direction: column; /* Empilha os elementos */
+      align-items: center;
+      gap: 20px; /* Espaço entre os cards */
+    }
+  
+    .cardMap,
+    .cardContato {
+      width: 90%; /* Faz os cards ocuparem quase toda a largura da tela */
+      height: auto; /* Ajusta automaticamente o tamanho */
+      margin: 0 auto; /* Centraliza */
+      padding: 20px;
+    }
+  
+    .cardMap iframe {
+      width: 100%; /* Mapa ocupa toda a largura do card */
+      height: 300px; /* Ajuste da altura para telas menores */
+    }
+  
+    .cardContato {
+      text-align: center; /* Alinha o conteúdo para melhor visualização */
+    }
+  
+    .cardContato h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  
+    .contact-item {
+      flex-direction: column; /* Ícone e texto um abaixo do outro */
+      align-items: center; 
+      text-align: center;
+    }
+  
+    .iconC {
+      width: 50px; /* Reduz o tamanho dos ícones */
+      height: 50px;
+    }
+  
+    .contact-item h2,
+    .contact-item p {
+      margin-left: 0; /* Remove margens laterais */
+      font-size: 18px;
+    }
+  }
+  

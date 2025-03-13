@@ -6,6 +6,10 @@ import SobreNos from './pages/SobreNos';
 import BlogPrevia from './pages/BlogPrevia';
 import BlogPostCompleto from './pages/BlogPostCompleto';
 import BlogAdmin from './pages/BlogAdmin';
+import LoginPage from './pages/LoginPage';
+import Dashboard from './pages/Dashboard';
+import DashboardT from './pages/DashboardT';
+
 
 function App() {
   // Carrega os posts do localStorage ao iniciar
@@ -37,6 +41,9 @@ function App() {
         <Route path="/blog" element={<BlogPrevia posts={posts} />} />
         <Route path="/blog-completo/:id" element={<BlogPostCompleto posts={posts} />} />
         <Route path="/blog-interno" element={<BlogAdmin addPost={addPost} />} />
+        <Route path="/login-page" element={<LoginPage />} />
+        <Route path="/admin-dashboard" element={<Dashboard />} />
+        <Route path="/tutor-dashboard/:token" element={<DashboardT />} />
         <Route path="*" element={<h1>Página não encontrada</h1>} />
       </Routes>
     </Router>

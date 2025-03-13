@@ -1,0 +1,122 @@
+/* Estilo geral do painel */
+.tutor-dashboard {
+    background: #f4f6f9;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Título do painel */
+  .tutor-dashboard h1 {
+    color: #121D32;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  /* Estilo do input */
+  .tutor-dashboard input {
+    padding: 14px;
+    border: 2px solid #27AAE1;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  /* Foco no input */
+  .tutor-dashboard input:focus {
+    outline: none;
+    border-color: #121D32;
+    box-shadow: 0 0 5px rgba(18, 29, 50, 0.3);
+  }
+  
+  /* Estilo dos botões */
+  .tutor-dashboard button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #27AAE1;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 450px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Hover e efeito nos botões */
+  button:hover {
+    background-color: #1f8ab6;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Mensagens de erro e sucesso */
+  .message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #e74c3c;
+  }
+  
+  /* Informações do token */
+  .token-info {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .token-info h2 {
+    color: #121D32;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .token-info p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .token-info p strong {
+    color: #27AAE1;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .tutor-dashboard {
+      padding: 20px;
+    }
+  
+    .tutor-dashboard h1 {
+      font-size: 2rem;
+    }
+  
+    .tutor-dashboard input, .tutor-dashboard button {
+      max-width: 100%;
+    }
+  
+    .token-info {
+      padding: 15px;
+    }
+  
+    .token-info h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

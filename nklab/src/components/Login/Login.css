@@ -1,0 +1,125 @@
+
+.login-container {
+    display: flex;
+    width: 100vw;
+    height: 580px;
+  }
+  
+  /* Imagem do lado esquerdo */
+  .login-image {
+    width: 100%;
+    height: 680px;
+    
+    background: url("/imgLogin1.svg") no-repeat center center/cover;
+  }
+  
+  /* Área de login à direita */
+  .login-form {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+    margin-right: 100px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius:50px ;
+    position: absolute;
+    margin-left: 700px;
+    
+    
+  }
+  
+  /* Estilização das abas */
+  .login-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .login-tabs button {
+    padding: 10px 20px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+  }
+  
+  .login-tabs .active {
+    background: #4BC6F8;
+    color: white;
+  }
+  
+  /* Inputs e botão */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  
+  input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  
+  button {
+    padding: 10px;
+    background: #4BC6F8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+   
+  }
+
+  button:hover{
+    background-color: #121D32; 
+    transform: scale(1.05); 
+  }
+  @media (max-width: 768px) {
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+  
+    .login-image {
+      width: 100%;
+      height: 100%; /* A imagem ocupa a tela toda */
+      background: url("/imgLogin1.svg") no-repeat center center/cover;
+    }
+  
+    .login-form {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-color: white;
+      padding: 20px;
+      z-index: 1;
+      border-radius: 0;
+    }
+  
+    .login-tabs {
+      flex-direction: column; /* Alinha as abas verticalmente */
+      margin-bottom: 15px;
+    }
+  
+    .login-tabs button {
+      padding: 8px 15px;
+    }
+  
+    input {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }

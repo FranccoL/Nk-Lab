@@ -10,6 +10,8 @@
     z-index: 99999; 
     position: fixed; 
     overflow: visible;
+    position: sticky;
+    top: 0;
 }
 .imgHeader{
     width: 180px;
@@ -28,11 +30,15 @@
     margin-left: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease; 
+    display: flex; /* Adiciona flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Garante o texto centralizado */
 }
 
 
 .btResultado:hover {
-    background-color: #3da9d7; 
+    background-color: #121D32; 
     transform: scale(1.05); 
 }
 
