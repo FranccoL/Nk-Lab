@@ -26,6 +26,11 @@ function SectionHome() {
           <button className="contact-button">Fale Conosco</button>
         </div>
       </div>
+
+      {/* WhatsApp flutuante */}
+      <div className="whatsapp-fly">
+        <img src="/WhatsAppNK.svg" alt="WhatsApp" className="whatsapp-icon" />
+      </div>
     </section>
   );
 }
