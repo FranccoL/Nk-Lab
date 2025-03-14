@@ -4,6 +4,7 @@ import "./Login.css";
 
 function Login() {
   const [activeTab, setActiveTab] = useState("tutor");
+  const [cpf, setCpf] = useState("");
   const navigate = useNavigate();
 
   const handleAdminLogin = (e) => {
@@ -13,8 +14,20 @@ function Login() {
 
   const handleTutorLogin = (e) => {
     e.preventDefault();
-    const token = e.target.elements.token.value;
-    navigate(`/tutor-dashboard/${token}`); // Redireciona com o token na URL
+    const token = cpf.replace(/\D/g, ""); // Remove pontos e traço antes de enviar
+    navigate(`/tutor-dashboard/${token}`);
+  };
+
+  const formatCpf = (value) => {
+    const cleaned = value.replace(/\D/g, "").slice(0, 11); // Remove não numéricos e limita a 11 caracteres
+    return cleaned
+      .replace(/^(\d{3})(\d)/, "$1.$2")
+      .replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3")
+      .replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4");
+  };
+
+  const handleCpfChange = (e) => {
+    setCpf(formatCpf(e.target.value));
   };
 
   return (
@@ -37,11 +50,19 @@ function Login() {
         </div>
 
         {activeTab === "tutor" && (
-            <form onSubmit={handleTutorLogin}>
-                <input type="text" name="token" placeholder="Digite seu CPF, por gentileza." required />
-                <button type="submit">Entrar</button>
-            </form>
-            )}
+          <form onSubmit={handleTutorLogin}>
+            <input
+              type="text"
+              name="token"
+              placeholder="Digite seu CPF, por gentileza."
+              value={cpf}
+              onChange={handleCpfChange}
+              maxLength={14} // Considerando os pontos e o traço
+              required
+            />
+            <button type="submit">Entrar</button>
+          </form>
+        )}
 
         {activeTab === "admin" && (
           <form onSubmit={handleAdminLogin}>
@@ -50,8 +71,6 @@ function Login() {
             <button type="submit">Entrar</button>
           </form>
         )}
-
-        
       </div>
     </div>
   );

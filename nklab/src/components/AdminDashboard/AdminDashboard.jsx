@@ -58,6 +58,18 @@ function AdminDashboard() {
     }
   };
 
+  const formatCpf = (value) => {
+    const cleaned = value.replace(/\D/g, "").slice(0, 11); // Remove não numéricos e limita a 11 caracteres
+    return cleaned
+      .replace(/^(\d{3})(\d)/, "$1.$2")
+      .replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3")
+      .replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4");
+  };
+
+  const handleCpfChange = (e) => {
+    setCpf(formatCpf(e.target.value));
+  };
+
   return (
     <div className="dashboard-container">
       <h1 className="dashboard-title">Painel do Administrador</h1>
@@ -66,9 +78,10 @@ function AdminDashboard() {
         <input
           type="text"
           value={cpf}
-          onChange={(e) => setCpf(e.target.value)}
+          onChange={handleCpfChange}
           placeholder="CPF do Tutor"
           required
+          maxLength={14} // Considerando os pontos e o traço
           className="input-field"
         />
         <input
@@ -111,14 +124,16 @@ function AdminDashboard() {
           required
           className="input-field"
         />
-        <input
-          type="text"
+        <select
           value={sexo}
           onChange={(e) => setSexo(e.target.value)}
-          placeholder="Sexo"
           required
           className="input-field"
-        />
+        >
+          <option value="">Selecione o Sexo</option>
+          <option value="Fêmea">Fêmea</option>
+          <option value="Macho">Macho</option>
+        </select>
         <input
           type="text"
           value={especie}

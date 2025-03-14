@@ -11,7 +11,7 @@ function DashboardT() {
   useEffect(() => {
     const fetchTokenData = async () => {
       try {
-        // Alterei para enviar a URL de requisição correta com a rota de exames
+        
         const response = await axios.get(`/api/tokens/${token}`);
 
         setTokenData(response.data);

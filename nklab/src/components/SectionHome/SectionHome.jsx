@@ -4,7 +4,7 @@ function SectionHome() {
   return (
     <section className="section-home">
       <div className="container-home">
-        {/* Vídeo no lugar do carrossel */}
+      
         <div className="video-container">
           <video autoPlay loop muted className="home-video">
             <source src="/video.mp4" type="video/mp4" />
@@ -15,7 +15,7 @@ function SectionHome() {
         {/* Conteúdo do lado direito */}
         <div className="content">
           <div className="logo-container">
-            <img src="/LOGOnk.svg" alt="Logo" className="logo" />
+            <img src="/LOGOnk.svg" alt="Logo" className="logoHome" />
           </div>
           <h1 className="titleHome">Exames veterinários de excelência</h1>
           <p className="subtitleHome">Diagnósticos de ponta para a saúde do seu pet!</p>

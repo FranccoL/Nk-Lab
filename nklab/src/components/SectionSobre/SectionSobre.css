@@ -30,6 +30,7 @@
     font-size: 24px;
     width: 550px;
     line-height: 180%;
+    text-align: start;
     
 }
 
@@ -57,7 +58,7 @@
 
 .bttSobre:hover {
     background: linear-gradient(to top, rgba(49, 175, 227, 0.9), rgba(115, 115, 115, 0.1)); 
-    color: black;
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
     
   }
