@@ -2,14 +2,14 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 .carousel-container {
-  width: 60%;
+  width: 64%;
   height: 30%; /* Faz o carrossel ocupar toda a altura do container */
   margin-top: 250px;
   margin-left: 250px;
   
 }
 .carousel-image{
-    border-radius: 50px;
+    
     border: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
