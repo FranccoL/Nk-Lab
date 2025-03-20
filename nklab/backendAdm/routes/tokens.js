@@ -35,12 +35,25 @@ router.post('/generate-token', async (req, res) => {
     return res.status(400).json({ message: 'Todos os campos são obrigatórios.' });
   }
 
+  // Converter a idade para um número (se for uma string como "3 anos")
+  let idadeConvertida = idade;
+
+  // Se a idade for uma string com anos (ex: "3 anos"), extraímos o número
+  if (idade && typeof idade === 'string' && idade.includes('anos')) {
+    idadeConvertida = parseInt(idade.replace(/\D/g, ''), 10); // Remove qualquer coisa que não seja número
+  }
+
+  // Verificar se a conversão foi bem-sucedida
+  if (isNaN(idadeConvertida)) {
+    return res.status(400).json({ message: 'A idade fornecida é inválida.' });
+  }
+
   try {
     const newToken = new TokenModel({
       token: cpf, // Usar o CPF como o token
       tutor,
       animal,
-      idade,
+      idade: idadeConvertida, // Armazenar a idade como número
       raca,
       sexo,
       especie,
@@ -51,7 +64,7 @@ router.post('/generate-token', async (req, res) => {
     res.status(201).json({ token: cpf, message: 'Token gerado com sucesso!' });
   } catch (error) {
     console.error("Erro ao gerar token:", error);
-    res.status(500).json({ message: 'Erro ao gerar o token.' });
+    res.status(500).json({ message: 'Erro ao gerar o token.', error: error.message });
   }
 });
 
