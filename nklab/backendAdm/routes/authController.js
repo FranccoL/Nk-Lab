@@ -3,7 +3,7 @@ const multer = require("multer");
 const path = require("path");
 const router = express.Router();
 const userService = require("../services/userService");
-const httpStatus = require('../infrastructure/httpStatus');
+const httpStatus = require("../infrastructure/httpStatus");
 
 // Configuração do Multer para armazenar o arquivo
 const storage = multer.diskStorage({
@@ -45,20 +45,25 @@ router.post("/generate-token", async (req, res) => {
   let idadeConvertida = idade;
 
   // Se a idade for uma string com anos (ex: "3 anos"), extraímos o número
-  const shouldFormatAge = idade && typeof idade === "string" && idade.includes("anos");
+  const shouldFormatAge =
+    idade && typeof idade === "string" && idade.includes("anos");
   if (shouldFormatAge) {
     idadeConvertida = parseInt(idade.replace(/\D/g, ""), 10); // Remove qualquer coisa que não seja número
   }
 
   // Verificar se a conversão foi bem-sucedida
   if (isNaN(idadeConvertida)) {
-    return res.status(httpStatus.BAD_REQUEST).json({ message: "A idade fornecida é inválida." });
+    return res
+      .status(httpStatus.BAD_REQUEST)
+      .json({ message: "A idade fornecida é inválida." });
   }
 
   try {
     await userService.create({ body: req.body, idadeConvertida });
 
-    res.status(httpStatus.CREATED).json({ token: cpf, message: "Token gerado com sucesso!" });
+    res
+      .status(httpStatus.CREATED)
+      .json({ token: cpf, message: "Token gerado com sucesso!" });
   } catch (error) {
     console.error("Erro ao gerar token:", error);
     res
@@ -73,18 +78,18 @@ router.post("/upload-exam/:token", upload.single("exam"), async (req, res) => {
 
   // Verificar se o arquivo foi enviado
   if (!req.file) {
-    return res.status(httpStatus.BAD_REQUEST).json({ message: "Nenhum arquivo enviado." });
+    return res
+      .status(httpStatus.BAD_REQUEST)
+      .json({ message: "Nenhum arquivo enviado." });
   }
 
   try {
-    const tokenData = await TokenModel.findOneAndUpdate(
-      { token },
-      { examPath: req.file.path },
-      { new: true }
-    );
+    await userService.update({ token, filePath: req.file.path });
 
     if (!tokenData) {
-      return res.status(httpStatus.NOT_FOUND).json({ message: "Token não encontrado." });
+      return res
+        .status(httpStatus.NOT_FOUND)
+        .json({ message: "Token não encontrado." });
     }
 
     res
@@ -92,7 +97,9 @@ router.post("/upload-exam/:token", upload.single("exam"), async (req, res) => {
       .json({ message: "Exame anexado com sucesso!", file: req.file });
   } catch (error) {
     console.error("Erro ao anexar exame:", error);
-    res.status(httpStatus.SERVER_ERROR).json({ message: "Erro ao salvar o exame." });
+    res
+      .status(httpStatus.SERVER_ERROR)
+      .json({ message: "Erro ao salvar o exame." });
   }
 });
 
@@ -104,13 +111,17 @@ router.get("/:token", async (req, res) => {
     const tokenData = await userService.get({ token });
 
     if (!tokenData) {
-      return res.status(httpStatus.NOT_FOUND).json({ message: "Token não encontrado." });
+      return res
+        .status(httpStatus.NOT_FOUND)
+        .json({ message: "Token não encontrado." });
     }
 
     res.json(tokenData); // Enviar as informações do token
   } catch (error) {
     console.error("Erro ao buscar token:", error);
-    res.status(httpStatus.BAD_REQUEST).json({ message: "Erro ao buscar informações do token." });
+    res
+      .status(httpStatus.BAD_REQUEST)
+      .json({ message: "Erro ao buscar informações do token." });
   }
 });
 
@@ -120,9 +131,9 @@ router.get("/download-exam/:token", async (req, res) => {
 
   try {
     // Buscar o token no banco de dados para obter o caminho do exame
-    const tokenData = await TokenModel.findOne({ token });
+    const tokenData = await userService.get({ token });
 
-    if (!tokenData || !tokenData.examPath) {
+    if (!tokenData || (!animal && !animal.examPath)) {
       return res
         .status(httpStatus.NOT_FOUND)
         .json({ message: "Exame não encontrado para esse token." });
@@ -132,12 +143,16 @@ router.get("/download-exam/:token", async (req, res) => {
     res.download(tokenData.examPath, (err) => {
       if (err) {
         console.error("Erro ao baixar o exame:", err);
-        return res.status(httpStatus.SERVER_ERROR).json({ message: "Erro ao baixar o exame." });
+        return res
+          .status(httpStatus.SERVER_ERROR)
+          .json({ message: "Erro ao baixar o exame." });
       }
     });
   } catch (error) {
     console.error("Erro ao buscar exame:", error);
-    res.status(httpStatus.SERVER_ERROR).json({ message: "Erro ao buscar exame." });
+    res
+      .status(httpStatus.SERVER_ERROR)
+      .json({ message: "Erro ao buscar exame." });
   }
 });
 

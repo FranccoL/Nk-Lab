@@ -54,6 +54,19 @@ const userService = {
       throw error;
     }
   },
+  async update({ token, filePath }) {
+    try {
+      await AnimalModel.findByIdAndUpdate(
+        { token },
+        { examPath: filePath},
+        { new: true }
+      );
+
+    } catch (error) {
+      console.error("Error ao salvar anexo", error);
+      throw error;
+    }
+  }
 };
 
 module.exports = userService;
