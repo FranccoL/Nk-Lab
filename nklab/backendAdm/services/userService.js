@@ -1,6 +1,6 @@
 const AnimalModel = require("../models/Animal");
 const TutorModel = require("../models/Tutor");
-const { formatCpf } = require("../helpers/formatCpf");
+const formatCpf = require("../helpers/formatCpf");
 
 const userService = {
   async create({ body, idadeConvertida }) {
