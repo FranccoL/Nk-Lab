@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 
-const TokenSchema = new mongoose.Schema({
-  token: { type: String, required: true },
-  tutor: { type: String, required: true },
-  animal: { type: String, required: true },
+const AnimalSchema = new mongoose.Schema({
+  tutor: { type: mongoose.Schema.Types.ObjectId, ref: "Tutor" }, // relacionamento entre a tabela Tutor e a tabela Animal
+  name: { type: String, required: true },
   idade: { type: Number, required: true },
   raca: { type: String, required: true },
   sexo: { type: String, required: true },
@@ -11,4 +10,4 @@ const TokenSchema = new mongoose.Schema({
   examPath: { type: String }, // Caminho do exame, opcional
 });
 
-module.exports = mongoose.model('Token', TokenSchema);
+module.exports = mongoose.model('Animal', AnimalSchema);
