@@ -1,6 +1,7 @@
 const AnimalModel = require("../models/Animal");
 const TutorModel = require("../models/Tutor");
 const formatCpf = require("../helpers/formatCpf");
+const tokenDto = require("../dtos/tokenDto");
 
 const userService = {
   async create({ body, idadeConvertida }) {
@@ -35,6 +36,22 @@ const userService = {
       const errorMessage = "Error ao criar novo Tutor e Animal";
       console.error(errorMessage, error);
       throw new Error(errorMessage);
+    }
+  },
+  async get({ token }) {
+    try {
+      const tutor = await TutorModel.findOne({ cpf: token });
+      const animal = await AnimalModel.findOne({ tutor: tutor._id });
+
+      const response = tokenDto({
+        tutor,
+        animal,
+      });
+
+      return response;
+    } catch (error) {
+      console.error("Erro ao buscar Animal", error);
+      throw error;
     }
   },
 };

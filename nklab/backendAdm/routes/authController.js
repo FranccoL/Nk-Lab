@@ -101,7 +101,7 @@ router.get("/:token", async (req, res) => {
   const { token } = req.params;
 
   try {
-    const tokenData = await TokenModel.findOne({ token });
+    const tokenData = await userService.get({ token });
 
     if (!tokenData) {
       return res.status(httpStatus.NOT_FOUND).json({ message: "Token não encontrado." });
