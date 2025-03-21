@@ -9,6 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "engines": {
+    "npm": "^9.6.3",
+    "node": "^19.9.0"
+  },
   "dependencies": {
     "axios": "^1.8.1",
     "multer": "^1.4.5-lts.1",

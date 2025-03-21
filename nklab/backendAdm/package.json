@@ -2,6 +2,10 @@
   "name": "backendadm",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "npm": "^8.19.3",
+    "node": "^16.19.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
