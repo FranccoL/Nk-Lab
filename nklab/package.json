@@ -14,7 +14,9 @@
     "node": "^19.9.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.8.1",
+    "framer-motion": "^12.6.3",
     "multer": "^1.4.5-lts.1",
     "path": "^0.12.7",
     "prop-types": "^15.8.1",

@@ -1,64 +1,98 @@
-
 .containerFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
     width: 100%;
-    border: 1px solid #ccc; /* Apenas para visualizar a área do footer */
-    height: 200px;
+    padding: 40px 50px; 
+    background: #2C3E50;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-top: 100px;
 }
 
-.logoFooterI {
-    width: 300px; /* Ajuste o tamanho conforme necessário */
-    margin-left: 80px;
-}
-
-.rightSection {
+/* Topo do footer */
+.footerTop {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    right: 20px; /* Alinha à direita */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px; /* Maior espaçamento entre as seções */
 }
 
+/* Logo */
+.logoFooterI {
+    width: 220px;
+}
+
+/* Navegação */
+.footerNav {
+    display: flex;
+    gap: 40px;
+}
+
+.footerNav a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footerNav a:hover {
+    color: #31AFE3;
+}
+
+/* Redes Sociais */
 .iconsRede {
     display: flex;
-    gap: 15px; /* Espaço entre os ícones */
-    margin-right: 100px;
-
+    gap: 20px; /* Aumentei o espaço entre os ícones */
 }
 
 .iconFooter {
-    width: 70px;  /* Reduzi o tamanho dos ícones */
-    height: 70px;
-    transition: transform 0.2s ease-in-out;
-    
+    width: 45px;
+    transition: transform 0.2s;
 }
 
 .iconFooter:hover {
-    transform: scale(1.1); /* Pequeno efeito ao passar o mouse */
+    transform: scale(1.1);
 }
 
+/* Seção inferior */
+.footerBottom {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px; /* Maior espaçamento na parte inferior */
+    flex-wrap: wrap;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .footerNav {
+        gap: 30px;
+    }
+}
 
 @media (max-width: 768px) {
-    .containerFooter {
+    .footerTop {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        height: auto;
-        padding: 20px;
+        gap: 25px; /* Maior espaçamento entre os itens */
     }
 
-    .logoFooterI {
-        width: 180px; 
-        margin-bottom: 20px;
-        margin-left: -50px;
+    .footerNav {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .iconsRede {
-        justify-content: center;
-        margin-left: 120px;
+    .footerBottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
     }
 }

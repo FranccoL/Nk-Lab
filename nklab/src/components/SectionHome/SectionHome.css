@@ -1,46 +1,45 @@
-
 .section-home {
   width: 100%;
   height: 580px;
-  background: linear-gradient(to bottom, #29a3ef, #364867); /* Degradê dinâmico */
+  background: linear-gradient(to bottom, #29a3ef, #364867);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   position: relative;
-  z-index: 1; /* Certifique-se de que está acima do header */
+  z-index: 1;
+  overflow-x: hidden; /* Garante que não haja rolagem lateral */
 }
 
-/* Estilização do container principal */
 .container-home {
   display: flex;
   height: 480px;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
+  overflow: hidden;
 }
 
 .video-container {
-  flex: 1; /* Mantém o espaço proporcional */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .home-video {
-  width: 100%;  /* Reduzindo a largura */
-  max-width: 700px; /* Limitando o tamanho máximo */
-  height: 500px; /* Diminuindo a altura */
-  object-fit: cover; /* Mantendo o enquadramento sem distorção */
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Ajustando o conteúdo para ocupar o lado direito */
 .content {
   flex: 1;
   display: flex;
@@ -104,45 +103,55 @@
   bottom: 20px;
   right: 20px;
   background-color: #25d366;
-  padding: 12px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.whatsapp-fly:hover {
+.whatsapp-fly:hover,
+.whatsapp-fly a:hover {
   transform: scale(1.1);
 }
 
+.whatsapp-fly a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 .whatsapp-icon {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .section-home {
-    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    height: auto;
     padding: 30px 15px;
-    width: 93%;
-  }
-  *{
-    border: red 3px solid;
+    width: 100%;
+    overflow-x: hidden; /* Evita rolagem lateral */
   }
 
   .container-home {
-    flex-direction: column; /* Empilha os elementos */
+    flex-direction: column;
     height: auto;
     text-align: center;
     padding: 20px;
     width: 100%;
-    max-width: 100vw;
-    
-    box-shadow: none; /* Remove sombra para um visual mais clean */
-    background-color: transparent; /* Remove o fundo branco translúcido */
+    max-width: 100%;
+    box-shadow: none;
+    background-color: transparent;
+    overflow: hidden;
   }
 
   .video-container {
@@ -152,42 +161,45 @@
     margin-bottom: 20px;
   }
 
-  .side-video {
+  .home-video {
     width: 100%;
-    max-width: 320px; /* Ajusta a largura do vídeo */
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
   }
 
   .content {
     margin-left: 0;
-    padding: 0 10px;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .logo-container {
+    justify-content: center;
     margin-bottom: 15px;
   }
 
-  .logo {
-    width: 150px; /* Reduz a logo para se ajustar melhor */
+  .logoHome {
+    width: 200px;
+    margin-left: 0;
   }
 
-  .title {
+  .titleHome {
     font-size: 2rem;
-    color: white;
+    text-align: center;
   }
 
-  .subtitle {
+  .subtitleHome {
     font-size: 1.3rem;
-    color: white;
+    text-align: center;
   }
 
-  .description {
+  .descriptionHome {
     font-size: 1rem;
     max-width: 90%;
+    text-align: center;
   }
 
   .contact-button {
@@ -199,7 +211,6 @@
   .whatsapp-fly {
     bottom: 15px;
     right: 15px;
-    padding: 10px;
   }
 
   .whatsapp-icon {

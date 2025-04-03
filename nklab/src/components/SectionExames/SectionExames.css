@@ -1,89 +1,149 @@
 .section-exams {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px; /* Adicionei padding para melhor espaçamento */
-  }
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 100px; /* Espaçamento entre o título e a grade */
-    font-size: 2rem; /* Aumentei o tamanho da fonte do título */
-    font-weight: bold;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+.exam-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+  border-left: 30px solid #31AFE3;
+  width: 400px;
+  height: 70px;
+  gap: 25px;
+  text-decoration: none;
+  color: #121D32;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.exam-card.right {
+  transform: translateX(100px);
+}
+
+.exam-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.exam-card:hover {
+  border-left: 30px solid #121D32;
+  transform: scale(1.05);
+}
+
+.exam-icon {
+  display: flex;
+  align-items: center;
+}
+
+.exam-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+/* ====== Responsividade ====== */
+
+/* Tablets e telas menores */
+@media (max-width: 1024px) {
   .exams-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Responsivo, ajusta o número de colunas baseado na largura da tela */
-    grid-gap: 40px; /* Espaçamento entre os cards */
-  }
-  
-  .exam-card {
-    display: flex; /* Alinha os elementos na horizontal */
-    align-items: center; /* Centraliza os itens verticalmente */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.2s ease-in-out;
-    border-left: 30px solid #31AFE3;
-    width: 400px;
-    height: 70px;
-    gap: 25px; 
-    
-}
-  
-  .exam-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */ 
-    border-left: 30px solid #121D32;
-    transform: scale(1.05); 
-  }
-  
-  
-  .exam-icon {
-    margin-bottom: 0; /* Remove o espaçamento inferior */
-    display: flex;
-    align-items: center;
-}
-  
-  .exam-icon img {
-    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: 50px;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  
-  @media (max-width: 768px) {
-    .section-exams {
-      padding: 20px;
-    }
-  
-    .section-title {
-      font-size: 1.8rem; /* Reduz um pouco o tamanho do título */
-      margin-bottom: 50px; /* Menos espaço entre o título e os cards */
-    }
-  
-    .exams-grid {
-      grid-template-columns: 1fr; /* Exibe uma única coluna */
-      gap: 20px; /* Reduz o espaçamento entre os cards */
-      margin-right: 50px;
-    }
-  
-    .exam-card {
-      width: 100%; /* Ocupa toda a largura disponível */
-      height: auto; /* Permite que o tamanho do card se ajuste ao conteúdo */
-      padding: 15px;
-      gap: 15px; /* Reduz o espaçamento entre ícone e texto */
-    }
-  
-    .exam-icon img {
-      width: 40px; /* Ícones menores para melhor proporção */
-      height: 40px;
-    }
-  
-    .exam-card p {
-      font-size: 1rem; /* Texto ajustado para melhor legibilidade */
-    }
+  .exam-card {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    padding: 15px;
+    gap: 15px;
   }
-  
-  
-  
+
+  .exam-icon img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-exams {
+    padding: 30px 15px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+  }
+
+  .exams-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .exam-card {
+    width: 100%;
+    padding: 15px;
+    border-left: 20px solid #31AFE3;
+  }
+
+  .exam-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .exam-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile menor */
+@media (max-width: 480px) {
+  .section-exams {
+    padding: 20px 10px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+  }
+
+  .exam-card {
+    width: 100%;
+    padding: 10px;
+    border-left: 15px solid #31AFE3;
+  }
+
+  .exam-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .exam-card p {
+    font-size: 0.9rem;
+  }
+}

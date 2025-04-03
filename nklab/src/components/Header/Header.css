@@ -1,155 +1,204 @@
-
-.headAll{
+/* ===== HEADER ===== */
+.headAll {
     background-color: #ffffff; 
     height: 80px; 
-    color: #fff; 
-    display: flex;
     width: 100%;
-    height: auto;
     border-bottom: solid 1px #303030;
     z-index: 99999; 
-    position: fixed; 
-    overflow: visible;
     position: sticky;
     top: 0;
-}
-.imgHeader{
-    width: 180px;
-    height: 80px;
-    margin-left: 60px;
-    margin-bottom: 10px;
-    
-    
-}
-.btResultado {
-    background-color: #4BC6F8;
-    color: #fff;
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; 
-    display: flex; /* Adiciona flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center; /* Garante o texto centralizado */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box; /* Evita que passe da tela */
+    overflow: hidden; /* Garante que nada ultrapasse */
 }
 
-
-.btResultado:hover {
-    background-color: #121D32; 
-    transform: scale(1.05); 
+/* ===== LOGO ===== */
+.imgHeader {
+    width: 150px;
+    height: auto;
+    margin-left: 100px;
 }
 
-
-header ul, li {
-    list-style: none;
+/* ===== MENU DESKTOP ===== */
+.navDesktop {
+    display: flex;
+    align-items: center;
+    gap: 30px;
     
 }
 
-nav{
-     display: flex;   
+.navDesktop ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;  
+    
 }
-nav ul{
-    margin-left: 600px;
-}
-nav a {     
+
+.navDesktop a {
     color: rgb(0, 0, 0);
-    font-size: 15px;
+    font-size: 17px;
     text-decoration: none;
-    margin-left: 40px;
-    font-weight: 600;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
 }
-nav a:hover{
+
+.navDesktop a:hover {
     color: #4BC6F8;
 }
 
-
+/* ===== MENU MOBILE ===== */
 .mobile-menu {
     display: none;
-}
-.btMobile{
-    color: white;
-    width: 70px;     height: 50px;     background-color: black;
-    font-family: "Julius Sans One", serif;
-    background-repeat: no-repeat;
-    background-size: contain;     background-position: center;     border: 0;
     cursor: pointer;
-    margin-left: 100px;
-    border-radius: 50px;
-    
-    transition: background-color 0.3s ease;
-    
-}
-.btMobile:hover{
-    background-color: #91490B;
+    position: relative;
+    margin-right: 30px;
 }
 
+.menu-icon {
+    width: 35px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-@media (max-width: 768px){
-   
-    nav.open{
-        display: flex;
-        align-items: end;
-    }
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #303030;
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
-    nav{
-        background-color: #303030;
-        border-left: 10px solid #91490B;
-        display: none;
-        flex-direction: column;
-        height: 100%;
-        padding: 37px;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 60vw;
-        z-index: 9999;
-        box-shadow: -50vw 0px 0px 0px rgb(0,0,0,0.90);
-        border-top-left-radius: 50px;
-    }
+/* Animação do botão hambúrguer ao abrir */
+.mobile-menu.open .menu-icon span:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+.mobile-menu.open .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu.open .menu-icon span:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+}
 
-    nav ul{
-        flex-direction: column;
-        width: 100%;
-    }
+/* ===== NAV MOBILE - Ajustado para não passar da tela ===== */
+.navMobile {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    background: rgba(48, 48, 48, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease-in-out;
+    z-index: 9999;
+    box-shadow: -10px 0px 15px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
 
-    nav ul li {
-        display: flex;
-    }
+.navMobile.open {
+    right: 0;
+}
 
-    nav a {
-        border-bottom: 1px solid white;
-        color: white;
-        font-size: 20px;
-        margin: 30px 0 10px 0;
-        padding: 12px;
-        text-decoration: none;
-        width: 100%;
-    }
+/* Itens do menu */
+.navMobile ul {
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+}
 
-    .mobile-menu{
-        display: block;
-    }
+.navMobile li {
+    padding: 30px 0;
+}
 
-    .close-btn{
-        background-color: #303030;
-        border: none;
-        color: white;
-        font-size: 25px;
-        margin: 0 0 12px;
-        padding: 12px;
-        width: fit-content;
-    }
+.navMobile a {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
 
+.navMobile a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+/* ===== BOTÃO DE FECHAR ===== */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
     .imgHeader {
-        margin-left: -25px;
+        width: 130px;
+    }
+    
+    .navDesktop ul {
+        gap: 20px;
+    }
+
+    .navDesktop a {
+        font-size: 18px;
     }
 }
 
+@media (max-width: 768px) {
+    .navDesktop {
+        display: none;
+    }
 
+    .navMobile {
+        width: 55vw;
+    }
 
+    .navMobile a {
+        font-size: 30px;
+    }
 
+    .mobile-menu {
+        display: flex;
+    }
 
+    .navMobile ul {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imgHeader {
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .navMobile {
+        width: 65vw;
+    }
+
+    .navMobile a {
+        font-size: 22px;
+    }
+
+    .close-btn {
+        font-size: 28px;
+    }
+}
 

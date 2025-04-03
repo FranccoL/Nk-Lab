@@ -12,22 +12,39 @@ function Header() {
     return (
         <header>
             <div className="container-header">
-                <div className="headAll d-flex al-center">
+                <div className="headAll">
                     <Link to="/">
-                        <img src="/LOGOnk.svg" alt="logo" className="imgHeader d-flex jc-flex-start al-center" />
+                        <img src="/LOGOnk.svg" alt="logo" className="imgHeader" />
                     </Link>
-                    <div className="mobile-menu">
-                        <button className="btMobile d-flex jc-flex-center al-center" onClick={toggleMenu}>Menu</button>
+
+                    {/* Menu Desktop (sempre visível) */}
+                    <nav className="navDesktop">
+                        <ul>
+                            <li><Link to="/">Início</Link></li>
+                            <li><Link to="/exames">Exames</Link></li>
+                            <li><Link to="/sobrenos">Sobre Nós</Link></li>
+                            <li><Link to="/blog">Blog</Link></li>
+                        </ul>
+                    </nav>
+
+                    {/* Menu Mobile */}
+                    <div className={`mobile-menu ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                        <div className="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
-                    <nav className={`${isOpen ? 'open' : ''}`}>
-                        <button className="mobile-menu close-btn" onClick={toggleMenu}>X</button>
-                        <ul className="d-flex">
+
+                    {/* Navegação Mobile */}
+                    <nav className={`navMobile ${isOpen ? 'open' : ''}`}>
+                        <button className="close-btn" onClick={toggleMenu}>✖</button>
+                        <ul>
                             <li><Link to="/" onClick={toggleMenu}>Início</Link></li>
                             <li><Link to="/exames" onClick={toggleMenu}>Exames</Link></li>
                             <li><Link to="/sobrenos" onClick={toggleMenu}>Sobre Nós</Link></li>
-                            <li><Link to="/blog" onClick={toggleMenu}>Blog</Link></li> {/* Alterado aqui */}
+                            <li><Link to="/blog" onClick={toggleMenu}>Blog</Link></li>
                         </ul>
-                        <Link to="/login-page" className="btResultado" onClick={toggleMenu}>Resultado de exames</Link>
                     </nav>
                 </div>
             </div>

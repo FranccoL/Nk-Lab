@@ -1,9 +1,11 @@
-.container-Parceria {
+.containerParceria {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Garante que o conteúdo fique centralizado */
+    text-align: center;
     margin-top: 100px;
+    padding: 20px;
+    width: 100%;
 }
 
 .convenio {
@@ -17,17 +19,39 @@
 
 .logoParceria {
     width: 250px;
-    margin: 0 auto; /* Centraliza a logo */
+    margin: 0 auto;
     display: block;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .convenio h1 {
+        font-size: 26px;
+    }
+
+    .logoParceria {
+        width: 220px;
+    }
+}
+
+/* Responsividade para celulares */
 @media (max-width: 768px) {
     .convenio h1 {
         font-size: 22px;
     }
 
     .logoParceria {
-        width: 180px; /* Reduz a logo para melhor proporção */
+        width: 180px;
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    .convenio h1 {
+        font-size: 20px;
+    }
+
+    .logoParceria {
+        width: 150px;
     }
 }
