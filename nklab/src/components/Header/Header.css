@@ -17,9 +17,9 @@
 
 /* ===== LOGO ===== */
 .imgHeader {
-    width: 150px;
+    width: 180px;
     height: auto;
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 /* ===== MENU DESKTOP ===== */
@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-right: 70px;
+    margin-right: 120px;
 }
 
 .navDesktop ul {
@@ -43,6 +43,7 @@
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease-in-out;
+    font-weight: normal; 
 }
 
 .navDesktop a:hover {

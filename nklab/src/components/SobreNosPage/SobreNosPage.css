@@ -246,10 +246,16 @@
 /* Ajustes para dispositivos menores que 480px */
 @media (max-width: 480px) {
   .sobreheader{
-    width: 70px;
+  
+    height: 80px;
+    
   }
   .sobreHeader h2 {
     font-size: 20px;
+    align-items: center;
+    position: relative;
+    top: -15px;
+    
   }
 .imgSobre{
   width: 100%;
