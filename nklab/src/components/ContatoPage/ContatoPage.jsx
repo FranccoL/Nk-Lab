@@ -10,10 +10,10 @@ function ContatoPage() {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_5n6281f',     
-      'template_yp06vvb',    
+      'service_5n6281f',
+      'template_yp06vvb',
       form.current,
-      'tld_C4ScikAphu76y'      
+      'tld_C4ScikAphu76y'
     )
     .then(() => {
       setMensagem('Mensagem enviada com sucesso!');
@@ -27,6 +27,12 @@ function ContatoPage() {
 
   return (
     <div className="contato-page">
+      <div className="contatoHeader-wrapper">
+        <div className="contatoHeader">
+          <h2>Sobre Nós</h2>
+        </div>
+      </div>
+
       <div className="contato-container">
         <div className="contato-info">
           <h1>Entre em Contato</h1>
