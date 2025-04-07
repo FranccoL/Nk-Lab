@@ -29,7 +29,7 @@ function ContatoPage() {
     <div className="contato-page">
       <div className="contatoHeader-wrapper">
         <div className="contatoHeader">
-          <h2>Sobre Nós</h2>
+          <h2>Contato</h2>
         </div>
       </div>
 
