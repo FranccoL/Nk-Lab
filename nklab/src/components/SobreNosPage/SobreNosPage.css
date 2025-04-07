@@ -213,37 +213,26 @@
 
 @media (max-width: 768px) {
   .carrossel-container {
-    padding: 20px; /* Menos espaçamento nas laterais */
-    width: 100%; /* Usa toda a largura disponível */
-    margin-top: 1200px;
+    padding: 20px;     width: 100%;     margin-top: 1200px;
     margin-left: -18px;
   }
 
   .avaliacao-card {
-    width: 100%;  /* Garante que o card ocupe mais espaço */
-    max-width: none; /* Remove qualquer limitação de largura */
-    padding: 15px; /* Diminui o padding para telas pequenas */
-    box-shadow: none; /* Remove a sombra para não ficar muito carregado */
-  }
+    width: 100%;      max-width: none;     padding: 15px;     box-shadow: none;   }
 
   .foto-avaliador {
-    width: 60px; /* Reduz o tamanho da foto */
-    height: 60px;
+    width: 60px;     height: 60px;
   }
 
   .avaliacao-card p {
-    font-size: 14px; /* Diminui o tamanho da fonte */
-  }
+    font-size: 14px;   }
 
   .avaliacao-card h4 {
-    font-size: 16px; /* Diminui o tamanho da fonte */
-  }
+    font-size: 16px;   }
 
   .swiper-pagination {
-    bottom: -30px; /* Ajusta a posição da paginação */
-  }
+    bottom: -30px;   }
 }
-/* Ajustes para dispositivos menores que 480px */
 @media (max-width: 480px) {
   .sobreheader{
   

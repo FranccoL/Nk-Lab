@@ -25,12 +25,12 @@ function SectionHome() {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            <source src="/labVideo.mp4" type="video/mp4" />
+            <source src="/video.mp4" type="video/mp4" />
             Seu navegador não suporta vídeos.
           </motion.video>
         </div>
 
-        {/* Conteúdo do lado direito */}
+        
         <motion.div
           className="content"
           initial={{ x: 100, opacity: 0 }}
@@ -46,7 +46,7 @@ function SectionHome() {
             Tecnologia de ponta e dedicação para um cuidado preciso. Descubra como podemos transformar a vida do seu melhor amigo.
           </p>
 
-          {/* Botão sem alterações, apenas com link */}
+          
           <motion.button
             className="contact-button"
             whileHover={{ scale: 1.1 }}
@@ -59,7 +59,7 @@ function SectionHome() {
         </motion.div>
       </motion.div>
 
-      {/* WhatsApp flutuante */}
+      
       <motion.div
         className="whatsapp-fly"
         initial={{ opacity: 0, scale: 0.5 }}

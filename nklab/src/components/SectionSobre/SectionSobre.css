@@ -62,7 +62,6 @@
   transform: scale(1.05);
 }
 
-/* Versão para tablets */
 @media (max-width: 1024px) {
   .logoSobre {
       margin-left: 100px;
@@ -88,7 +87,6 @@
   }
 }
 
-/* Versão para celulares */
 @media (max-width: 768px) {
   .sectionSobre {
       padding: 20px;
@@ -136,7 +134,6 @@
   }
 }
 
-/* Versão para telas pequenas */
 @media (max-width: 480px) {
   .logoSobre {
       width: 200px;

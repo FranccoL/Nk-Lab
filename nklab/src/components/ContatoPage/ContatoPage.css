@@ -1,0 +1,152 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contato-page {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contato-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contato-info {
+  flex: 1;
+  background-color: #27AAE1;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.contato-info img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contato-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.contato-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: #27AAE1;
+  box-shadow: 0 0 8px rgba(39, 170, 225, 0.4);
+}
+
+.contato-form input:hover,
+.contato-form textarea:hover {
+  border-color: #27AAE1;
+}
+
+.contato-form button {
+  margin-top: 10px;
+  padding: 14px;
+  background-color: #27AAE1;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contato-form button:hover {
+  background-color: #1f8ec4;
+  transform: scale(1.03);
+}
+
+.mensagem-envio {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+/* Responsivo - Tablets */
+@media (max-width: 1024px) {
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contato-form {
+    margin-top: 0;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .contato-info {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+/* Responsivo - Celular */
+@media (max-width: 768px) {
+  .contato-page {
+    padding: 40px 10px;
+  }
+
+  .contato-info h1,
+  .contato-form h1 {
+    font-size: 24px;
+  }
+
+  .contato-form input,
+  .contato-form textarea {
+    font-size: 15px;
+  }
+
+  .contato-form button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .mensagem-envio {
+    font-size: 14px;
+  }
+}

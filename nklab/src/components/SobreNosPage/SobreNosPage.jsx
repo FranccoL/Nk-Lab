@@ -62,19 +62,19 @@ function SobreNosPage() {
         <Swiper
   modules={[Navigation, Pagination]}
   spaceBetween={20}
-  slidesPerView={1}  // No mobile, apenas 1 card por vez
+  slidesPerView={1}  
   navigation
   pagination={{ clickable: true }}
   loop={false}
   breakpoints={{
     1024: {
-      slidesPerView: 3, // Em telas maiores, mostra 3 cards por vez
+      slidesPerView: 3, 
     },
     768: {
-      slidesPerView: 1, // No mobile (abaixo de 768px), mostra 1 card por vez
+      slidesPerView: 1, 
     },
     480: {
-      slidesPerView: 1, // Em telas muito pequenas (abaixo de 480px), ainda será 1 card por vez
+      slidesPerView: 1, 
     },
   }}
 >

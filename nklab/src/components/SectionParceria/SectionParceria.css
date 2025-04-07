@@ -23,7 +23,6 @@
     display: block;
 }
 
-/* Responsividade para tablets */
 @media (max-width: 1024px) {
     .convenio h1 {
         font-size: 26px;
@@ -34,7 +33,6 @@
     }
 }
 
-/* Responsividade para celulares */
 @media (max-width: 768px) {
     .convenio h1 {
         font-size: 22px;
@@ -45,7 +43,6 @@
     }
 }
 
-/* Responsividade para telas muito pequenas */
 @media (max-width: 480px) {
     .convenio h1 {
         font-size: 20px;

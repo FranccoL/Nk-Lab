@@ -10,7 +10,7 @@
     margin-top: 100px;
 }
 
-/* Topo do footer */
+
 .footerTop {
     width: 100%;
     max-width: 1200px;
@@ -18,15 +18,15 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 30px; /* Maior espaçamento entre as seções */
+    margin-bottom: 30px; 
 }
 
-/* Logo */
+
 .logoFooterI {
     width: 220px;
 }
 
-/* Navegação */
+
 .footerNav {
     display: flex;
     gap: 40px;
@@ -43,10 +43,10 @@
     color: #31AFE3;
 }
 
-/* Redes Sociais */
+
 .iconsRede {
     display: flex;
-    gap: 20px; /* Aumentei o espaço entre os ícones */
+    gap: 20px; 
 }
 
 .iconFooter {
@@ -58,7 +58,7 @@
     transform: scale(1.1);
 }
 
-/* Seção inferior */
+
 .footerBottom {
     width: 100%;
     max-width: 1200px;
@@ -67,11 +67,11 @@
     align-items: center;
     font-size: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 20px; /* Maior espaçamento na parte inferior */
+    padding-top: 20px; 
     flex-wrap: wrap;
 }
 
-/* Responsividade */
+
 @media (max-width: 1024px) {
     .footerNav {
         gap: 30px;
@@ -82,7 +82,7 @@
     .footerTop {
         flex-direction: column;
         text-align: center;
-        gap: 25px; /* Maior espaçamento entre os itens */
+        gap: 25px; 
     }
 
     .footerNav {

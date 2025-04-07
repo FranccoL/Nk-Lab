@@ -1,7 +1,7 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-/* --- GERAL --- */
+
 
 .carousel-container {
   width: 64%;
@@ -28,8 +28,6 @@
   height: 100%;
 }
 
-/* --- HEADER --- */
-
 .exames-header {
   width: 250px;
   background: linear-gradient(to right, rgba(49, 175, 227, 0.8), rgba(115, 115, 115, 0.1));
@@ -46,8 +44,6 @@
   color: white;
   font-weight: normal;
 }
-
-/* --- CONTAINER PRINCIPAL --- */
 
 .exames-logo {
   position: absolute;
@@ -78,7 +74,6 @@
   font-weight: normal;
 }
 
-/* --- SECTION DOS EXAMES --- */
 
 .exames-section {
   text-align: center;
@@ -167,9 +162,7 @@
   transform: scale(1.05);
 }
 
-/* === MEDIA QUERIES === */
 
-/* Tablets até 1024px */
 @media (max-width: 1024px) {
   .carousel-container {
     margin: 80px auto 0;
@@ -281,7 +274,7 @@
   }
 }
 
-/* Telas muito pequenas (até 480px) */
+
 @media (max-width: 480px) {
   .exames-text p {
     font-size: 14px;

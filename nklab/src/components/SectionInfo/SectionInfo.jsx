@@ -9,18 +9,18 @@ function SectionInfo() {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
           } else {
-            entry.target.classList.remove("visible"); // Mantém a animação reaplicável
+            entry.target.classList.remove("visible"); 
           }
         });
       },
-      { threshold: 0.2 } // Quando 20% da div aparece na tela
+      { threshold: 0.2 }
     );
 
     const bgLinear = document.querySelector(".backgrLinear");
     if (bgLinear) observer.observe(bgLinear);
 
     return () => {
-      if (bgLinear) observer.unobserve(bgLinear); // Evita bugs
+      if (bgLinear) observer.unobserve(bgLinear);
     };
   }, []);
 

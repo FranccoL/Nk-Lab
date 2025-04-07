@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
+ 
 }
 
 .exam-card {
@@ -28,7 +29,7 @@
   transition: transform 0.2s ease-in-out;
   border-left: 30px solid #31AFE3;
   width: 400px;
-  height: 70px;
+  height: 125px;
   gap: 25px;
   text-decoration: none;
   color: #121D32;
@@ -61,9 +62,7 @@
   height: 50px;
 }
 
-/* ====== Responsividade ====== */
 
-/* Tablets e telas menores */
 @media (max-width: 1024px) {
   .exams-grid {
     grid-template-columns: 1fr;
@@ -89,7 +88,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .section-exams {
     padding: 30px 15px;
@@ -121,7 +119,6 @@
   }
 }
 
-/* Mobile menor */
 @media (max-width: 480px) {
   .section-exams {
     padding: 20px 10px;
