@@ -31,16 +31,14 @@
     display: flex;
     gap: 30px;
     list-style: none;  
-    
 }
 
 .navDesktop a {
     color: rgb(0, 0, 0);
     font-size: 17px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: normal;
     transition: color 0.3s ease-in-out;
-    font-weight: normal; 
 }
 
 .navDesktop a:hover {
@@ -83,23 +81,23 @@
 
 .navMobile {
     position: fixed;
-    right: -100%;
+    left: -100%;
     top: 0;
-    width: 50vw;
+    width: 65vw;
     height: 100vh;
     background: rgba(48, 48, 48, 0.95);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: right 0.5s ease-in-out;
-    z-index: 9999;
+    transition: left 0.5s ease-in-out;
+    z-index: 10000;
     box-shadow: -10px 0px 15px rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
 }
 
 .navMobile.open {
-    right: 0;
+    left: 0;
 }
 
 .navMobile ul {
@@ -137,13 +135,12 @@
     cursor: pointer;
 }
 
-
-
+/* RESPONSIVO */
 @media (max-width: 1024px) {
     .imgHeader {
         width: 130px;
     }
-    
+
     .navDesktop ul {
         gap: 20px;
     }
@@ -193,4 +190,3 @@
         font-size: 28px;
     }
 }
-

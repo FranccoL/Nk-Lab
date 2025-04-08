@@ -34,7 +34,7 @@ function Footer() {
       
       <div className="footerBottom d-flex jc-space-between al-center">
         <p>© 2025 NK Laboratório Veterinário - Todos os direitos reservados.</p>
-        <p>Email: contato@nklab.com | Telefone: (11) 97725-9849</p>
+        <p>Email: nklabvet@gmail.com | Telefone: (11) 97725-9849</p>
       </div>
     </footer>
   );
