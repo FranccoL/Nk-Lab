@@ -25,7 +25,7 @@ function SectionHome() {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            <source src="/video.mp4" type="video/mp4" />
+            <source src="/labVideo.mp4" type="video/mp4" />
             Seu navegador não suporta vídeos.
           </motion.video>
         </div>
