@@ -1,67 +1,180 @@
-# React + Vite
+# NK Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[🌐 Project Completed (Not Hosted)](#)  
+[![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)  
+[![Vite](https://img.shields.io/badge/Vite-6.1.0-yellow)](https://vitejs.dev/)  
+[![License](https://img.shields.io/badge/License-Private-lightgrey)](#)
 
-Currently, two official plugins are available:
+**NK Lab** is a front-end project fully developed by me, delivering a modern and functional website design and implementation for the company **NK Lab**.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-
-# Site Institucional - Laboratório Veterinário
-
-Este é um projeto completo de um site institucional para um laboratório veterinário, desenvolvido com foco em performance, responsividade e experiência do usuário.
-
-O objetivo principal foi criar um site profissional que refletisse credibilidade, modernidade e funcionalidade para os visitantes. O layout foi idealizado e codificado do zero, com componentes reutilizáveis e animações suaves.
+The project is complete and fully functional, including a **tutor login system** for viewing exams and an **admin panel** for managing the system. However, the company decided not to continue with hosting and deployment.
 
 ---
 
-## Funcionalidades
+## Technologies Used
 
-- Página inicial com informações do laboratório
-- Carrossel animado de exames realizados
-- Página de contato com envio de email via formulário
-- Integração com Google Maps
-- Layout responsivo para **celulares**, **tablets**, **notebooks** e **telas grandes**
-- Efeitos `hover`, animações de entrada, e destaque em campos de formulário
-- Estrutura escalável e modular com componentes React
+- **React 19** – Main library for building the interface  
+- **Vite** – Fast and modern build tool  
+- **React Router DOM** – Page navigation  
+- **Swiper & React Slick** – Interactive content carousels  
+- **AOS (Animate on Scroll)** – Scroll animations  
+- **EmailJS** – Contact form integration without backend  
+- **Framer Motion** – Animations for React components  
+- **ESLint** – Code quality and consistency  
+
+---
+
+## Features
+
+- Smooth page navigation using React Router  
+- Interactive carousels with Swiper and React Slick  
+- Scroll-based animations with AOS  
+- Fully functional contact form via EmailJS  
+- **Tutor login system for exam viewing**  
+- **Admin panel for system management**  
+- Responsive and modern design  
+- Clean and well-organized code with ESLint  
+- Completed project, ready for deployment
+
+---
+
+## Installation and Usage (for development)
+
+1. Clone the repository:
+````
+    git clone https://github.com/FranccoL/Nk-Lab.git
+````
+2.  Navigate to the project folder:
+````
+    cd nklab
+   ````
+3.  Install dependencies:    
+````
+    npm install
+````
+4.  Run development server:
+````
+    npm run dev
+````
+
+## Project Status
+
+The NK Lab project was fully developed, including design, front-end implementation, a tutor login system, and an admin panel.
+
+The project was not hosted or published online because the company decided not to continue with hosting and maintenance costs.
+Nevertheless, the project is complete and fully functional, ready to be deployed.
+
+## Contribution
+
+This project was entirely developed by me for the company NK Lab.
+External contributions are not expected, but suggestions and feedback are welcome.
+
+## License
+
+This project is private and belongs to the company NK Lab.
+
+Developed entirely by me: from client communication to design and implementation, including tutor login and admin panel, completed and ready for deployment.
+
+## Contact
+
+Author: Leonardo Franco Moreno
+Email: leofranco96@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/leonardofmoreno
+
+Portfolio: https://portfolio-leonardo-franco.vercel.app
+
+GitHub: https://github.com/FranccoL
+
+# NK Lab
+
+[🌐 Projeto Concluído (Não Hospedado)](#)  
+[![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)  
+[![Vite](https://img.shields.io/badge/Vite-6.1.0-yellow)](https://vitejs.dev/)  
+[![License](https://img.shields.io/badge/License-Private-lightgrey)](#)
+
+**NK Lab** é um projeto front-end totalmente desenvolvido por mim, entregando um site moderno e funcional para a empresa **NK Lab**.  
+
+O projeto está completo e totalmente funcional, incluindo um **sistema de login de tutores** para visualização de exames e um **painel administrativo** para gestão do sistema. No entanto, a empresa decidiu não dar continuidade à hospedagem e publicação.
 
 ---
 
 ## Tecnologias Utilizadas
 
-### Frontend
-- [React.js](https://reactjs.org/) – Biblioteca principal
-- React Router DOM – Gerenciamento de rotas
-- React Slick – Carrossel de exames
-- EmailJS – Envio de mensagens via formulário
-- CSS Puro – Estilização responsiva e efeitos visuais
-- Intersection Observer API – Animações ao rolar a página
-- Google Maps Embed API – Mapa com localização
-- JSX – Sintaxe estendida do JavaScript para React
-
-### Backend (Desenvolvido e cancelado posteriormente pelo cliente)
-> **⚠️ O backend foi implementado com todas as funcionalidades, mas o cliente optou por não utilizar neste momento.**
-
-- Node.js + Express – API RESTful
-- MongoDB – Banco de dados NoSQL
-- Mongoose – Modelagem de dados
-- Multer – Upload de arquivos (exames)
-- Nodemailer – Envio de emails com PDF
-- Dotenv – Variáveis de ambiente
+- **React 19** – Biblioteca principal para construção da interface  
+- **Vite** – Ferramenta de build rápida e moderna  
+- **React Router DOM** – Navegação entre páginas  
+- **Swiper & React Slick** – Carrosséis interativos  
+- **AOS (Animate on Scroll)** – Animações ao rolar a página  
+- **EmailJS** – Integração de formulário de contato sem backend  
+- **Framer Motion** – Animações para componentes React  
+- **ESLint** – Garantia de qualidade e padronização de código  
 
 ---
 
-Contato
-Se você quiser me contratar, conversar ou tirar dúvidas:
+## Funcionalidades
 
-Email: leofranco96@gmail.com
-
-LinkedIn: [linkedin.com/in/seuusuario](https://www.linkedin.com/in/leonardofmoreno/)
-
+- Navegação fluida entre páginas usando React Router  
+- Carrosséis interativos com Swiper e React Slick  
+- Animações ao rolar a página com AOS  
+- Formulário de contato funcional via EmailJS  
+- **Sistema de login de tutores para visualização de exames**  
+- **Painel administrativo para gestão do sistema**  
+- Design responsivo e moderno  
+- Código limpo e organizado com ESLint  
+- Projeto completo, pronto para deployment
 
 ---
 
-Observações Finais
+## Instalação e Uso (para desenvolvimento)
 
-Este projeto foi desenvolvido com carinho, atenção aos detalhes e foco em proporcionar uma experiência moderna tanto visualmente quanto funcionalmente. A versão final reflete o que o cliente solicitou com ajustes personalizados, mesmo com mudanças no escopo ao longo do desenvolvimento.
+1. Clone o repositório:
+```bash
+git clone https://github.com/FranccoL/Nk-Lab.git
+```
+2. Navegue até a pasta do projeto:
+```bash
+cd nklab
+```
+3. Instale as dependências:    
+```bash
+npm install
+```
+4. Execute o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+---
+
+## Status do Projeto
+
+O projeto **NK Lab** foi totalmente desenvolvido, incluindo design, implementação front-end, sistema de login de tutores e painel administrativo.  
+
+O projeto não foi hospedado ou publicado online porque a empresa decidiu não prosseguir com os custos de hospedagem e manutenção.  
+Apesar disso, o projeto está completo e totalmente funcional, pronto para deployment.
+
+---
+
+## Contribuição
+
+Este projeto foi desenvolvido integralmente por mim para a empresa **NK Lab**.  
+Não estão previstas colaborações externas, mas sugestões e feedback são bem-vindos.
+
+---
+
+## Licença
+
+Este projeto é **privado** e pertence à empresa **NK Lab**.  
+
+Desenvolvido integralmente por mim: desde o contato com a empresa até o design e implementação, incluindo login de tutores e painel administrativo, finalizado e pronto para deployment.
+
+---
+
+## Contato
+
+Autor: Leonardo Franco Moreno  
+Email: leofranco96@gmail.com  
+LinkedIn: [https://www.linkedin.com/in/leonardofmoreno](https://www.linkedin.com/in/leonardofmoreno)  
+Portfólio: [https://portfolio-leonardo-franco.vercel.app](https://portfolio-leonardo-franco.vercel.app)  
+GitHub: [https://github.com/FranccoL](https://github.com/FranccoL)
